@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Portfolio from "./components/Portfolio";
+import Portfolio from "./components/portfolio";
 
 const Home: NextPage = () => {
   return (
