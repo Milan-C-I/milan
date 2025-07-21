@@ -1,6 +1,6 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Portfolio from './components/Portfolio';
+import type { NextPage } from "next";
+import Head from "next/head";
+import Portfolio from "./components/Portfolio";
 
 const Home: NextPage = () => {
   return (
