@@ -10,7 +10,7 @@ const Portfolio: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [activeTab, setActiveTab] = useState("home");
-  const [bgStyle, setBgStyle] = useState({});
+  // const [bgStyle, setBgStyle] = useState({});
 
   useEffect(() => {
     const handleScroll = () => {
