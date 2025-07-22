@@ -63,8 +63,8 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, onTabChange, isVisible = tru
 
   return (
     <div 
-      className={`fixed w-[100vw] py-2 sm:w-auto bottom-0 left-1/2 transform -translate-x-1/2 z-50 sm:backdrop-blur-none backdrop-blur-md transition-all duration-500 ${
-        isVisible ? 'translate-y-5 sm:translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+      className={`fixed w-[100vw] py-2 sm:w-auto bottom-0 sm:bottom-4 left-1/2 transform -translate-x-1/2 z-50 sm:backdrop-blur-none backdrop-blur-md transition-all duration-500 ${
+        isVisible ? 'translate-y-0 sm:translate-y-0 opacity-100' : 'translate-y-0 opacity-0'
       }`}
     >
       <nav 
