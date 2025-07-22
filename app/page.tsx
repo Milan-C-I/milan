@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Portfolio from "./components/Portfolio";
+import Portfolio from "./components/portfolio";
 import UnderConstructionBanner from "./components/underconstruction";
 
 const Home: NextPage = () => {
@@ -14,7 +14,6 @@ const Home: NextPage = () => {
       </Head>
       <UnderConstructionBanner />
       <Portfolio />
-      
     </>
   );
 };
