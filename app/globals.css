@@ -180,3 +180,18 @@ body {
 .text-shadow {
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
+
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.under-construction-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-marquee 15s linear infinite;
+}

@@ -1,45 +1,45 @@
-"use client";
+"use client"
 
-import React, { useEffect, useState } from "react";
-import Header from "./Header";
-import Navbar from "./Navbar";
-import LandingPage from "./LandingPage";
-import PlaceholderPage from "./PlaceholderPage";
+import type React from "react"
+import { useEffect, useState } from "react"
+import Header from "./Header"
+import Navbar from "./Navbar"
+import LandingPage from "./LandingPage"
+import PlaceholderPage from "./PlaceholderPage"
+import SkillsPage from "./SkillsPage"
 
 const Portfolio: React.FC = () => {
-  const [scrollY, setScrollY] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeTab, setActiveTab] = useState("home");
+  const [scrollY, setScrollY] = useState(0)
+  const [isVisible, setIsVisible] = useState(false)
+  const [activeTab, setActiveTab] = useState("home")
   // const [bgStyle, setBgStyle] = useState({});
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window?.scrollY);
+      setScrollY(window?.scrollY)
 
-      const glowIntensity = Math.min(0.9, 0.6 + window.scrollY * 0.001);
-      document
-        .querySelector(".animated-gradient")
-        ?.setAttribute("style", `opacity: ${glowIntensity}`);
-    };
-    handleScroll();
+      const glowIntensity = Math.min(0.9, 0.6 + window.scrollY * 0.001)
+      document.querySelector(".animated-gradient")?.setAttribute("style", `opacity: ${glowIntensity}`)
+    }
+    handleScroll()
     // Trigger animations on mount
-    setTimeout(() => setIsVisible(true), 100);
+    setTimeout(() => setIsVisible(true), 100)
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   const handleTabChange = (tab: string) => {
-    setActiveTab(tab);
+    setActiveTab(tab)
     // Reset animations when changing tabs
-    setIsVisible(false);
-    setTimeout(() => setIsVisible(true), 100);
-  };
+    setIsVisible(false)
+    setTimeout(() => setIsVisible(true), 100)
+  }
 
   const renderCurrentPage = () => {
     switch (activeTab) {
       case "home":
-        return <LandingPage isVisible={isVisible} />;
+        return <LandingPage isVisible={isVisible} />
       case "summary":
         return (
           <PlaceholderPage
@@ -47,7 +47,7 @@ const Portfolio: React.FC = () => {
             description="A comprehensive overview of my professional journey, key achievements, and career highlights."
             isVisible={isVisible}
           />
-        );
+        )
       case "experience":
         return (
           <PlaceholderPage
@@ -55,15 +55,9 @@ const Portfolio: React.FC = () => {
             description="Detailed breakdown of my work experience, projects, and professional accomplishments."
             isVisible={isVisible}
           />
-        );
+        )
       case "skills":
-        return (
-          <PlaceholderPage
-            title="Skills"
-            description="Technical skills, programming languages, frameworks, and tools I work with."
-            isVisible={isVisible}
-          />
-        );
+        return <SkillsPage isVisible={isVisible} />
       case "links":
         return (
           <PlaceholderPage
@@ -71,11 +65,11 @@ const Portfolio: React.FC = () => {
             description="Connect with me on various platforms and explore my work across the web."
             isVisible={isVisible}
           />
-        );
+        )
       default:
-        return <LandingPage isVisible={isVisible} />;
+        return <LandingPage isVisible={isVisible} />
     }
-  };
+  }
 
   return (
     <>
@@ -213,10 +207,7 @@ const Portfolio: React.FC = () => {
 
       <div className="relative min-h-screen overflow-hidden font-inter">
         {/* Animated Background */}
-        <div
-          className="fixed inset-0 -z-10 animated-gradient"
-          style={{ opacity: 0.9 }}
-        />
+        <div className="fixed inset-0 -z-10 animated-gradient" style={{ opacity: 0.9 }} />
 
         {/* Header */}
         <Header isVisible={isVisible} />
@@ -227,20 +218,14 @@ const Portfolio: React.FC = () => {
 
           {/* Navigation Bar */}
           <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-10">
-            <Navbar
-              activeTab={activeTab}
-              onTabChange={handleTabChange}
-              isVisible={isVisible}
-            />
+            <Navbar activeTab={activeTab} onTabChange={handleTabChange} isVisible={isVisible} />
           </div>
         </div>
 
         {/* Scroll Indicator - Only show on home page */}
         {activeTab === "home" && (
           <div
-            className={`absolute bottom-24 left-1/2 transform -translate-x-1/2 ${
-              isVisible ? "fade-in" : "opacity-0"
-            }`}
+            className={`absolute bottom-24 left-1/2 transform -translate-x-1/2 ${isVisible ? "fade-in" : "opacity-0"}`}
             style={{ animationDelay: "2s" }}
           >
             <div className="animate-bounce">
@@ -252,7 +237,7 @@ const Portfolio: React.FC = () => {
         )}
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Portfolio;
+export default Portfolio
