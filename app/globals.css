@@ -70,15 +70,31 @@ body {
   transition: opacity 0.3s ease;
 }
 
+.animated-gradient1 {
+  /* background: linear-gradient(
+    -45deg,
+    #ff8800,
+    #ff0044,
+    #3300ff,
+    #00c0ff
+  ); */
+  background: radial-gradient(circle at left, red 0%,  transparent 20% );
+
+  background-size: 200% 200%;
+  background-repeat: no-repeat;
+  animation: gradientShift 4s ease infinite;
+  transition: opacity 0.3s ease;
+}
+
 @keyframes gradientShift {
   0% {
-    background-position: 0% 0%;
+    background-position: 25% 100%;
   }
   50% {
-    background-position: 100% 0%;
+    background-position: 0% 100%;
   }
   100% {
-    background-position: 0% 0%;
+    background-position: 25% 100%;
   }
 }
 
