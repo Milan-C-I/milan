@@ -70,7 +70,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, onTabChange, isVisible = tru
 
       <nav 
         ref={navRef}
-        className="relative w-[90vw] m-auto sm:w-auto max-w-md sm:max-w-none bg-black/20 backdrop-blur-lg rounded-full mt-3 mb-0.5 px-3 py-3 sm:px-3 sm:py-3 border border-white/10 shadow-2xl"
+        className="relative w-[90vw] m-auto sm:w-auto max-w-md sm:max-w-none bg-black/20 backdrop-blur-lg rounded-full mt-1 mb-0.5 px-3 py-3 sm:px-3 sm:py-3 border border-white/10 shadow-2xl"
       >
         {/* Sliding indicator */}
         <div
