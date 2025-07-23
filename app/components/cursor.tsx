@@ -1,6 +1,6 @@
 'use client';
 import { useEffect } from 'react';
-import useFluidCursor from './fluidcursor';
+import useFluidCursor from './FluidCursor';
 
 
 
