@@ -63,17 +63,20 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, onTabChange, isVisible = tru
 
   return (
     <div 
-      className={`fixed w-[100vw] py-2 sm:w-auto bottom-0 sm:bottom-4 left-1/2 transform -translate-x-1/2 z-50 sm:backdrop-blur-none backdrop-blur-md transition-all duration-500 ${
+      className={`fixed w-[100vw] pt-2 pb-3 sm:w-auto bottom-0 sm:bottom-4 left-1/2 transform -translate-x-1/2 z-50 sm:backdrop-blur-none backdrop-blur-md transition-all duration-500 ${
         isVisible ? 'translate-y-0 sm:translate-y-0 opacity-100' : 'translate-y-0 opacity-0'
       }`}
     >
+      <div className="sm:hidden text-orange-400 text-sm text-center mb-2 font-medium">
+          {navItems.find(item => item.id === activeTab)?.label}
+        </div>
       <nav 
         ref={navRef}
-        className="relative w-[90vw] m-auto sm:w-auto max-w-md sm:max-w-none bg-black/20 backdrop-blur-lg rounded-full px-3 py-3 sm:px-3 sm:py-3 border border-white/10 shadow-2xl"
+        className="relative w-[90vw] m-auto sm:w-auto max-w-md sm:max-w-none bg-black/20 backdrop-blur-lg rounded-full mb-3 px-3 py-3 sm:px-3 sm:py-3 border border-white/10 shadow-2xl"
       >
         {/* Sliding indicator */}
         <div
-          className="absolute top-2 sm:top-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full transition-all duration-500 ease-out shadow-lg"
+          className="absolute top-2 sm:top-3 bg-gradient-to-br from-black via-black to-orange-400 rounded-full transition-all duration-500 ease-out shadow-lg"
           style={{
             width: `${indicatorStyle.width + 5}px`, // slightly wider on mobile
             height: '70%', // taller on mobile
@@ -96,7 +99,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, onTabChange, isVisible = tru
                 onClick={() => handleTabClick(item.id)}
                 className={`relative z-10 px-3 py-2 sm:px-4 sm:py-3 rounded-full font-medium flex items-center gap-1.5 sm:gap-2 transition-all duration-300 text-xs sm:text-sm md:text-base group ${
                   isActive 
-                    ? 'text-white scale-105' 
+                    ? 'text-orange-200 scale-105' 
                     : 'text-white/70 hover:text-white hover:scale-105'
                 } hover:shadow-lg`}
                 style={{ animationDelay: `${1.4 + index * 0.1}s` }}
@@ -131,9 +134,6 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, onTabChange, isVisible = tru
         {/* Glow effect */}
         <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-600/20 blur-xl opacity-50" />
       </nav>
-        <div className="sm:hidden text-white text-sm text-center mt-2 font-medium">
-          {navItems.find(item => item.id === activeTab)?.label}
-        </div>
     </div>
   );
 };
