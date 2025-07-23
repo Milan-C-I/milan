@@ -282,7 +282,7 @@ const SkillsPage: React.FC<SkillsPageProps> = ({ isVisible = true }) => {
                       <div //card size
                         className={`w-32 h-38 sm:w-38 sm:h-48 md:w-48 md:h-56 lg:w-56 lg:h-64 bg-white/10 backdrop-blur-xl rounded-sm  border border-white/20 shadow-xl flex items-center justify-center p-3 transition-all duration-500 ${
                           isActive
-                            ? "bg-gradient-to-br from-blue-500/40 to-purple-600/40 border-blue-400/60 shadow-2xl"
+                            ? "bg-gradient-to-br from-black/40 via-black/20 to-orange-400/40 border-blue-400/60 shadow-2xl"
                             : "hover:bg-white/20 hover:border-white/30"
                         }`}
                       >
@@ -330,18 +330,18 @@ const SkillsPage: React.FC<SkillsPageProps> = ({ isVisible = true }) => {
           >
             {/* Simple progress track */}
             <div
-              className="absolute top-0 left-0 h-full bg-gradient-to-r from-blue-500 to-purple-600 rounded-full transition-all duration-300"
+              className="absolute top-0 left-0 h-full bg-gradient-to-r from-black to-orange-400 rounded-full transition-all duration-300"
               style={{ width: `${progressPercentage}%` }}
             />
 
             {/* Progress handle */}
             <div
-              className={`absolute top-1/2 w-6 h-6 sm:w-8 sm:h-8 bg-white rounded-full shadow-lg transform -translate-y-1/2 transition-all duration-300 cursor-grab ${
+              className={`absolute top-1/2 w-6 h-6 sm:w-8 sm:h-8 bg-gray-500 rounded-full shadow-lg transform -translate-y-1/2 transition-all duration-300 cursor-grab ${
                 isDragging ? "scale-125 cursor-grabbing shadow-2xl" : "group-hover:scale-110"
               }`}
               style={{ left: `${progressPercentage}%`, transform: "translate(-50%, -50%)" }}
             >
-              <div className="absolute inset-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full" />
+              <div className="absolute inset-1 bg-gradient-to-br from-black via-black to-orange-400 rounded-full" />
             </div>
           </div>
         </div>

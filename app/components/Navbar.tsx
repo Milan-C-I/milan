@@ -67,12 +67,10 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, onTabChange, isVisible = tru
         isVisible ? 'translate-y-0 sm:translate-y-0 opacity-100' : 'translate-y-0 opacity-0'
       }`}
     >
-      <div className="sm:hidden text-orange-400 text-sm text-center mb-2 font-medium">
-          {navItems.find(item => item.id === activeTab)?.label}
-        </div>
+
       <nav 
         ref={navRef}
-        className="relative w-[90vw] m-auto sm:w-auto max-w-md sm:max-w-none bg-black/20 backdrop-blur-lg rounded-full mb-3 px-3 py-3 sm:px-3 sm:py-3 border border-white/10 shadow-2xl"
+        className="relative w-[90vw] m-auto sm:w-auto max-w-md sm:max-w-none bg-black/20 backdrop-blur-lg rounded-full mt-3 mb-0.5 px-3 py-3 sm:px-3 sm:py-3 border border-white/10 shadow-2xl"
       >
         {/* Sliding indicator */}
         <div
@@ -134,6 +132,9 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, onTabChange, isVisible = tru
         {/* Glow effect */}
         <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-600/20 blur-xl opacity-50" />
       </nav>
+            <div className="sm:hidden text-orange-400 text-sm text-center font-medium">
+          {navItems.find(item => item.id === activeTab)?.label}
+        </div>
     </div>
   );
 };
