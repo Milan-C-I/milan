@@ -7,6 +7,7 @@ import {
   MapPinIcon,
   LinkIcon,
 } from "@heroicons/react/24/outline";
+import Skills from "./skills";
 
 interface LandingPageProps {
   name?: string;
@@ -88,6 +89,7 @@ const LandingPage: React.FC<LandingPageProps> = ({
           </div>
         </div>
       </div>
+      <Skills/>
     </div>
   );
 };
