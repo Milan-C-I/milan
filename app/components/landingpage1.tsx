@@ -913,3 +913,120 @@ export default LandingPage;
 // }
 
 // export default SkillsPage
+
+
+// <div className="hidden lg:flex h-screen">
+//         {/* Left Side - Skills Content */}
+//         <div className="flex-1 p-8 xl:p-12 overflow-y-auto">
+//           <div className="max-w-7xl mx-auto space-y-16">
+//             {skillCategories.map((category, categoryIndex) => (
+//               <div
+//                 key={category.title}
+//                 ref={el => {categoryRefs.current[categoryIndex] = el}}
+//                 className={`transform transition-all duration-700 ease-out ${
+//                   categoriesInView[categoryIndex] 
+//                     ? "opacity-0 translate-x-12" 
+//                     : "opacity-100 -translate-x-0"
+//                 }`}
+//               >
+//                 <div className="flex items-center justify-between mb-8">
+//                   <h3 className="text-2xl xl:text-3xl font-bold text-gray-300 border-b border-gray-700 pb-3">
+//                     {category.title}
+//                   </h3>
+//                   {/* Hovered skill info */}
+//                   <div className={`transition-opacity duration-300 ${hoveredSkill ? 'opacity-100' : 'opacity-0'}`}>
+//                     {hoveredSkill && (
+//                       <div className="text-right">
+//                         <h4 className="text-lg font-semibold text-blue-300 mb-1">
+//                           {hoveredSkill.name}
+//                         </h4>
+//                         <p className="text-sm text-gray-400">
+//                           {hoveredSkill.description}
+//                         </p>
+//                       </div>
+//                     )}
+//                   </div>
+//                 </div>
+                
+//                 {/* Skills Grid */}
+//                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-8 gap-4">
+//                   {category.skills.map((skill, skillIndex) => (
+//                     <div
+//                       key={skill.name}
+//                       className={`skill-card group relative bg-gray-900/50 backdrop-blur-sm rounded-lg border border-gray-800 transition-all duration-300 hover:scale-[1.05] cursor-pointer overflow-hidden h-16 transform ${
+//                         categoriesInView[categoryIndex] 
+//                           ? "opacity-0 translate-y-8" 
+//                           : "opacity-100 translate-y-0"
+//                       }`}
+//                       style={{ 
+//                         transitionDelay: `${skillIndex * 100}ms`
+//                       }}
+//                       onMouseEnter={() => setHoveredSkill({name: skill.name, description: skill.description})}
+//                       onMouseLeave={() => setHoveredSkill(null)}
+//                     >
+//                       {/* Moving border light effect */}
+//                       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+//                         <div className="absolute inset-0 rounded-lg overflow-hidden">
+//                           <div className="absolute inset-[-2px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg animate-spin-slow opacity-75"></div>
+//                           <div className="absolute inset-[2px] bg-gray-900 rounded-lg"></div>
+//                         </div>
+//                       </div>
+                      
+//                       {/* Content */}
+//                       <div className="relative z-10 flex items-center h-full px-3">
+//                         <span className="text-lg group-hover:scale-110 transition-transform duration-300 mr-2 flex-shrink-0">
+//                           {skill.icon}
+//                         </span>
+//                         <h4 className="text-xs font-semibold text-white group-hover:text-blue-300 transition-colors duration-300 truncate">
+//                           {skill.name}
+//                         </h4>
+//                       </div>
+//                     </div>
+//                   ))}
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+
+//         {/* Right Side - Vertical Skills Header with Abstract Background */}
+//         <div className="w-80 xl:w-96 relative bg-gray-900 flex items-center justify-center">
+//           {/* Abstract Background Pattern */}
+//           <div className="absolute inset-0 opacity-20">
+//             <div className="absolute top-0 left-0 w-full h-full">
+//               {/* Geometric shapes */}
+//               <div className="absolute top-20 left-10 w-16 h-32 bg-white/10 transform rotate-12 animate-float"></div>
+//               <div className="absolute top-40 right-8 w-24 h-16 bg-white/5 transform -rotate-6 animate-float-delayed"></div>
+//               <div className="absolute bottom-40 left-6 w-20 h-20 bg-white/10 transform rotate-45 animate-float"></div>
+//               <div className="absolute bottom-20 right-12 w-28 h-12 bg-white/5 transform rotate-12 animate-float-delayed"></div>
+//               <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-white/5 transform -translate-x-1/2 -translate-y-1/2 rotate-30 animate-float"></div>
+              
+//               {/* Lines */}
+//               <div className="absolute top-32 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
+//               <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
+//               <div className="absolute bottom-32 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
+//             </div>
+//           </div>
+
+//           {/* Vertical Skills Text with slide animation */}
+//           <div className="relative z-10 flex flex-col items-center">
+//             {"SKILLS".split("").map((letter, index) => (
+//               <div
+//                 key={index}
+//                 className={`text-7xl xl:text-8xl font-black text-white transform transition-all duration-700 ease-out mb-2 ${
+//                   visibleLetters > index 
+//                     ? "opacity-100 translate-x-0 scale-100" 
+//                     : "opacity-0 translate-x-8 scale-75"
+//                 }`}
+//                 style={{ 
+//                   transitionDelay: `${index * 150}ms`,
+//                   textShadow: "0 0 30px rgba(255,255,255,0.3)",
+//                   letterSpacing: "0.1em"
+//                 }}
+//               >
+//                 {letter}
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </div>

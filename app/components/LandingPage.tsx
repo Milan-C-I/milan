@@ -29,7 +29,7 @@ const LandingPage: React.FC<LandingPageProps> = ({
   isVisible = true,
 }) => {
   return (
-    <div className="min-h-[80vh] flex flex-col justify-center px-6 sm:px-12 lg:px-20 xl:px-32">
+    <div className="min-h-[80vh] flex flex-col justify-center px-6 sm:px-12 lg:px-20 xl:px-32 mt-28">
       {/* Job Title */}
       <div
         className={`mb-4 ${isVisible ? "slide-up" : "opacity-0 translate-y-8"}`}
