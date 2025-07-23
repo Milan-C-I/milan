@@ -56,27 +56,29 @@ body {
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
 .animated-gradient {
-  background: linear-gradient(
+  /* background: linear-gradient(
     -45deg,
     #ff8800,
     #ff0044,
     #3300ff,
     #00c0ff
-  );
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
+  ); */
+  background: radial-gradient(circle at right, orange 0%,  black 50% );
+
+  /* background-size: 200% 200%; */
+  /* animation: gradientShift 4s ease infinite; */
   transition: opacity 0.3s ease;
 }
 
 @keyframes gradientShift {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 100% 0%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
 }
 
