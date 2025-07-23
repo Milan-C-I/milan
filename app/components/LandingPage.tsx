@@ -8,6 +8,9 @@ import {
   LinkIcon,
 } from "@heroicons/react/24/outline";
 import Skills from "./skills";
+import Projects from "./projects";
+import WorkExperience from "./workexperience";
+import GetInTouch from "./getintouch";
 
 interface LandingPageProps {
   name?: string;
@@ -29,7 +32,7 @@ const LandingPage: React.FC<LandingPageProps> = ({
   isVisible = true,
 }) => {
   return (
-    <div className="min-h-[80vh] flex flex-col justify-center px-6 sm:px-12 lg:px-20 xl:px-32 mt-28">
+    <div className="min-h-[80vh] flex flex-col justify-center px-6 sm:px-12 lg:px-20 xl:px-32 my-28">
       {/* Job Title */}
       <div
         className={`mb-4 ${isVisible ? "slide-up" : "opacity-0 translate-y-8"}`}
@@ -90,6 +93,9 @@ const LandingPage: React.FC<LandingPageProps> = ({
         </div>
       </div>
       <Skills/>
+      <Projects/>
+      <WorkExperience/>
+      <GetInTouch/>
     </div>
   );
 };
