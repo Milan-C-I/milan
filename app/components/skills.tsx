@@ -119,8 +119,8 @@ const Skills: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-none text-white overflow-hidden">
-      <div className="min-h-screen py-6">
+    <div className="bg-none text-white overflow-hidden">
+      <div className="py-6 overflow-hidden">
         <div className="mb-12">
           <h2
             className={`text-2xl sm:text-4xl mb-8 font-extrabold md:font-semibold leading-none tracking-tight text-white transform transition-all duration-700 ease-out ${
@@ -142,7 +142,7 @@ const Skills: React.FC = () => {
             )}
           </div>
 
-          <div ref={skillsRef} className="flex gap-3 overflow-x-auto pb-4 scrollbar-hide flex-wrap">
+          <div ref={skillsRef} className="flex gap-3 overflow-x-auto pb-4 scrollbar-hide flex-wrap overflow-hidden">
             {allSkills.map((skill, skillIndex) => {
               const IconComponent = skill.icon;
               const isInView = skillsInView[skillIndex];
