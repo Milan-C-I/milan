@@ -204,7 +204,7 @@ const SkillsPage: React.FC<SkillsPageProps> = ({ isVisible = true }) => {
   const progressPercentage = (currentSkillIndex / (totalSkills - 1)) * 100
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center relative overflow-hidden">
+    <div className="min-h-screen flex flex-col items-center relative overflow-hidden">
       {/* Edge fade effects */}
       {/* Header */}
         <div className="text-center mb-8 sm:mb-12 z-20 relative">
@@ -227,17 +227,17 @@ const SkillsPage: React.FC<SkillsPageProps> = ({ isVisible = true }) => {
       </div>
 
       <div
-        className={`w-full h-full flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-8 ${isVisible ? "slide-up" : "opacity-0 translate-y-8"}`}
+        className={`absolute bottom-0 w-full h-full flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-8 ${isVisible ? "slide-up" : "opacity-0 translate-y-8"}`}
       >
         
 
         {/* Semi-circular Skills Display */}
-        <div className="relative w-full h-full flex-1 flex items-center justify-center">
+        <div className="absolute -top-10 md:top-40 lg:top-80 transform translate-y-128 w-full h-full flex-1 flex items-center justify-center">
           <div className="relative w-full h-full max-w-6xl max-h-[70vh]">
             {/* Current Skill Name Display - Above Progress Bar */}
-            <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 z-30">
-              <div className="text-center p-4 sm:p-6 bg-black/30 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl">
-                <h2 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 text-shadow">
+            <div className="absolute top-48 md:top-20 lg:-top-16 left-1/2 transform -translate-x-1/2 -translate-y-96 z-30">
+              <div className="text-center p-4 sm:p-6 sm:px-16 shadow-2xl">
+                <h2 className="text-white text-3xl sm:text-4xl lg:text-2xl font-bold mb-2 text-shadow">
                   {currentSkill.name}
                 </h2>
                 <p className="text-white/80 text-lg sm:text-xl font-medium">{currentSkill.category}</p>
@@ -246,7 +246,7 @@ const SkillsPage: React.FC<SkillsPageProps> = ({ isVisible = true }) => {
 
             {/* Rotating Semi-circular Skills Container */}
             <div
-              className="absolute inset-0 flex items-center justify-center transition-transform duration-700 ease-out"
+              className="absolute transform translate-x-4 inset-0 flex items-center justify-center transition-transform duration-700 ease-out"
               style={{ transform: `rotate(${rotation}deg)` }}
             >
               <div className="relative w-96 h-96 sm:w-[500px] sm:h-[500px] lg:w-[600px] lg:h-[600px]">
@@ -254,7 +254,7 @@ const SkillsPage: React.FC<SkillsPageProps> = ({ isVisible = true }) => {
                   // Position skills along the semi-circle arc
                   const angle = -90 + index * angleStep // From -90° (top) to +90° (bottom)
                   const radian = (angle * Math.PI) / 180
-                  const radius = 250 // Distance from center
+                  const radius = 480 // Distance from center
                   const x = 50 + (radius / 3) * Math.cos(radian) // Percentage position
                   const y = 50 + (radius / 3) * Math.sin(radian)
 
@@ -266,7 +266,7 @@ const SkillsPage: React.FC<SkillsPageProps> = ({ isVisible = true }) => {
                     <div
                       key={skill.id}
                       className={`absolute transition-all duration-700 cursor-pointer group ${
-                        isActive ? "scale-125 z-30" : "scale-100 hover:scale-110 z-10"
+                        isActive ? "scale-125 translate-1/12 z-30" : "scale-100 hover:scale-110 z-10"
                       }`}
                       style={{
                         left: `${x}%`,
@@ -279,8 +279,8 @@ const SkillsPage: React.FC<SkillsPageProps> = ({ isVisible = true }) => {
                         setRotation(-index * angleStep)
                       }}
                     >
-                      <div
-                        className={`w-20 h-28 sm:w-24 sm:h-32 lg:w-28 lg:h-36 bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 shadow-xl flex items-center justify-center p-3 transition-all duration-500 ${
+                      <div //card size
+                        className={`w-32 h-38 sm:w-38 sm:h-48 md:w-48 md:h-56 lg:w-56 lg:h-64 bg-white/10 backdrop-blur-xl rounded-sm  border border-white/20 shadow-xl flex items-center justify-center p-3 transition-all duration-500 ${
                           isActive
                             ? "bg-gradient-to-br from-blue-500/40 to-purple-600/40 border-blue-400/60 shadow-2xl"
                             : "hover:bg-white/20 hover:border-white/30"
@@ -313,7 +313,7 @@ const SkillsPage: React.FC<SkillsPageProps> = ({ isVisible = true }) => {
         </div>
 
         {/* Progress Bar - Simple design */}
-        <div className="w-full max-w-2xl mx-auto mb-8 z-20 relative">
+        <div className="w-full max-w-2xs md:max-w-xl lg:max-w-xl mx-auto mb-8 z-20 absolute bottom-60 md:bottom-48">
           <div className="mb-4 text-center">
             <span className="text-white/70 text-sm font-medium">
               {currentSkillIndex + 1} of {totalSkills}
@@ -322,7 +322,7 @@ const SkillsPage: React.FC<SkillsPageProps> = ({ isVisible = true }) => {
 
           <div
             ref={progressRef}
-            className="relative h-3 sm:h-4 bg-white/20 rounded-full cursor-pointer group select-none"
+            className="relative h-1 sm:h-2 bg-white/20 rounded-full cursor-pointer group select-none"
             onMouseDown={handleMouseDown}
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
