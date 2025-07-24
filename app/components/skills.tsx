@@ -151,7 +151,7 @@ const Skills: React.FC = () => {
                 <div
                   key={skill.name}
                   data-index={skillIndex}
-                  className={`skill-card ml-1 group relative flex-shrink-0 w-40 sm:w-52 sm:h-32 bg-gray-900/50 backdrop-blur-sm rounded-lg border border-gray-800 transition-all duration-700 hover:scale-[1.05] overflow-hidden transform ${
+                  className={`skill-card ml-1 group relative flex-shrink-0 w-[45%] sm:w-52 sm:h-32 bg-gray-900/50 backdrop-blur-sm rounded-lg border border-gray-800 transition-all duration-700 hover:scale-[1.05] overflow-hidden transform ${
                     isInView 
                       ? 'opacity-100 translate-x-0 translate-y-0' 
                       : 'opacity-0 translate-x-[-100px] translate-y-8'
