@@ -204,7 +204,7 @@ const ProjectsPage: React.FC = () => {
     <div className="min-h-screen text-white mb-28">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl animate-pulse"></div>
+        {/* <div className="absolute top-20 left-10 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl animate-pulse"></div> */}
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
         {[...Array(20)].map((_, i) => (
           <div
@@ -334,7 +334,7 @@ const ProjectsPage: React.FC = () => {
                           return (
                             <div
                               key={tool}
-                              className={`flex items-center gap-1 px-2 py-1 rounded-md transition-all duration-300 ${
+                              className={`flex hover:scale-110 hover:rotate-3 items-center gap-1 px-2 py-1 rounded-md transition-all duration-300 ${
                                 isHovered ? 'bg-orange-500/20 text-orange-300 scale-105' : 'bg-gray-800/50 text-gray-400'
                               }`}
                               style={{

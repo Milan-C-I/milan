@@ -353,7 +353,7 @@ const WorkExperience: React.FC = () => {
                             return (
                               <div
                                 key={tech}
-                                className={`flex items-center gap-1 px-3 py-1 rounded-md text-xs transition-all duration-300 ${
+                                className={`flex hover:scale-110 hover:rotate-3  items-center gap-1 px-3 py-1 rounded-md text-xs transition-all duration-300 ${
                                   isHovered ? 'bg-orange-500/20 text-orange-300 scale-105' : 'bg-gray-800/50 text-gray-400'
                                 }`}
                                 style={{
