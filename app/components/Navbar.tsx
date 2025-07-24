@@ -22,8 +22,8 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, onTabChange, isVisible = tru
 
   const navItems = [
     { icon: HomeIcon, label: 'Home', id: 'home' },
-    { icon: BriefcaseIcon, label: 'Summary', id: 'summary' },
-    { icon: UserIcon, label: 'Experience', id: 'experience' },
+    { icon: BriefcaseIcon, label: 'About', id: 'about' },
+    { icon: UserIcon, label: 'Projects', id: 'projects' },
     { icon: WrenchScrewdriverIcon, label: 'Skills', id: 'skills' },
     { icon: LinkIcon, label: 'Links', id: 'links' },
   ];

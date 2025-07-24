@@ -2,14 +2,35 @@
 
 import type React from "react"
 import { useState, useEffect, useRef } from "react"
-import Image from "next/image"
+import { 
+  SiReact, 
+  SiNextdotjs, 
+  SiTypescript, 
+  SiTailwindcss, 
+  SiVuedotjs, 
+  SiNodedotjs, 
+  SiExpress, 
+  SiPython, 
+  SiDjango, 
+  SiMongodb, 
+  SiPostgresql, 
+  SiFirebase, 
+  SiAwsamplify, 
+  SiRedis, 
+  SiGit, 
+  SiDocker, 
+  SiLinux, 
+  SiFigma 
+} from "react-icons/si"
+import { FaServer } from "react-icons/fa"
+import { VscVscode } from "react-icons/vsc"
 
 interface Skill {
   id: number
   name: string
-  image: string
+  icon: React.ComponentType<{ className?: string }>
   category: string
-  description?: string
+  description: string
 }
 
 interface SkillsPageProps {
@@ -24,92 +45,28 @@ const SkillsPage: React.FC<SkillsPageProps> = ({ isVisible = true }) => {
   const [dragStartX, setDragStartX] = useState(0)
   const [dragStartProgress, setDragStartProgress] = useState(0)
 
-  // Dummy skills data - can be easily modified
+  // Updated skills data with icons
   const skills: Skill[] = [
-    {
-      id: 1,
-      name: "React",
-      image: "/placeholder.svg?height=120&width=80",
-      category: "Frontend",
-      description: "JavaScript library for building user interfaces",
-    },
-    {
-      id: 2,
-      name: "Node.js",
-      image: "/placeholder.svg?height=120&width=80",
-      category: "Backend",
-      description: "JavaScript runtime for server-side development",
-    },
-    {
-      id: 3,
-      name: "TypeScript",
-      image: "/placeholder.svg?height=120&width=80",
-      category: "Language",
-      description: "Typed superset of JavaScript",
-    },
-    {
-      id: 4,
-      name: "Python",
-      image: "/placeholder.svg?height=120&width=80",
-      category: "Language",
-      description: "High-level programming language",
-    },
-    {
-      id: 5,
-      name: "MongoDB",
-      image: "/placeholder.svg?height=120&width=80",
-      category: "Database",
-      description: "NoSQL document database",
-    },
-    {
-      id: 6,
-      name: "AWS",
-      image: "/placeholder.svg?height=120&width=80",
-      category: "Cloud",
-      description: "Amazon Web Services cloud platform",
-    },
-    {
-      id: 7,
-      name: "Docker",
-      image: "/placeholder.svg?height=120&width=80",
-      category: "DevOps",
-      description: "Containerization platform",
-    },
-    {
-      id: 8,
-      name: "GraphQL",
-      image: "/placeholder.svg?height=120&width=80",
-      category: "API",
-      description: "Query language for APIs",
-    },
-    {
-      id: 9,
-      name: "Next.js",
-      image: "/placeholder.svg?height=120&width=80",
-      category: "Framework",
-      description: "React framework for production",
-    },
-    {
-      id: 10,
-      name: "PostgreSQL",
-      image: "/placeholder.svg?height=120&width=80",
-      category: "Database",
-      description: "Advanced open source relational database",
-    },
-    {
-      id: 11,
-      name: "Vue.js",
-      image: "/placeholder.svg?height=120&width=80",
-      category: "Frontend",
-      description: "Progressive JavaScript framework",
-    },
-    {
-      id: 12,
-      name: "Redis",
-      image: "/placeholder.svg?height=120&width=80",
-      category: "Database",
-      description: "In-memory data structure store",
-    },
+    { id: 1, name: "React.js", icon: SiReact, category: "Frontend", description: "Component-based UI library" },
+    { id: 2, name: "Next.js", icon: SiNextdotjs, category: "Framework", description: "Full-stack React framework" },
+    { id: 3, name: "TypeScript", icon: SiTypescript, category: "Language", description: "Typed JavaScript superset" },
+    { id: 4, name: "Tailwind CSS", icon: SiTailwindcss, category: "Styling", description: "Utility-first CSS framework" },
+    { id: 5, name: "Vue.js", icon: SiVuedotjs, category: "Frontend", description: "Progressive JavaScript framework" },
+    { id: 6, name: "Node.js", icon: SiNodedotjs, category: "Backend", description: "JavaScript runtime environment" },
+    { id: 7, name: "Express.js", icon: SiExpress, category: "Backend", description: "Web application framework" },
+    { id: 8, name: "Python", icon: SiPython, category: "Language", description: "High-level programming language" },
+    { id: 9, name: "Django", icon: SiDjango, category: "Framework", description: "Python web framework" },
+    { id: 10, name: "REST APIs", icon: FaServer, category: "API", description: "RESTful web services" },
+    { id: 11, name: "MongoDB", icon: SiMongodb, category: "Database", description: "NoSQL document database" },
+    { id: 12, name: "PostgreSQL", icon: SiPostgresql, category: "Database", description: "Relational database system" },
+    { id: 13, name: "Firebase", icon: SiFirebase, category: "Backend", description: "Backend-as-a-Service platform" },
+    { id: 14, name: "AWS", icon: SiAwsamplify, category: "Cloud", description: "Cloud computing services" },
+    { id: 15, name: "Redis", icon: SiRedis, category: "Database", description: "In-memory data structure store" },
+    { id: 16, name: "Git", icon: SiGit, category: "DevOps", description: "Version control system" },
+    { id: 17, name: "Docker", icon: SiDocker, category: "DevOps", description: "Containerization platform" },
+    { id: 18, name: "VS Code", icon: VscVscode, category: "Tools", description: "Source code editor" },
+    { id: 19, name: "Linux", icon: SiLinux, category: "OS", description: "Open-source operating system" },
+    { id: 20, name: "Figma", icon: SiFigma, category: "Design", description: "Design and prototyping tool" },
   ]
 
   const totalSkills = skills.length
@@ -237,9 +194,12 @@ const SkillsPage: React.FC<SkillsPageProps> = ({ isVisible = true }) => {
             {/* Current Skill Name Display - Above Progress Bar */}
             <div className="absolute top-48 md:top-20 lg:-top-16 left-1/2 transform -translate-x-1/2 -translate-y-96 z-30">
               <div className="text-center p-4 sm:p-6 sm:px-16 shadow-2xl">
-                <h2 className="text-white text-3xl sm:text-4xl lg:text-2xl font-bold mb-2 text-shadow">
-                  {currentSkill.name}
-                </h2>
+                <div className="flex items-center justify-center gap-3 mb-2">
+                  <currentSkill.icon className="text-3xl sm:text-4xl lg:text-5xl text-white" />
+                  <h2 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold text-shadow">
+                    {currentSkill.name}
+                  </h2>
+                </div>
                 <p className="text-white/80 text-lg sm:text-xl font-medium">{currentSkill.category}</p>
               </div>
             </div>
@@ -280,20 +240,30 @@ const SkillsPage: React.FC<SkillsPageProps> = ({ isVisible = true }) => {
                       }}
                     >
                       <div //card size
-                        className={`w-32 h-38 sm:w-38 sm:h-48 md:w-48 md:h-56 lg:w-56 lg:h-64 bg-white/10 backdrop-blur-xl rounded-sm  border border-white/20 shadow-xl flex items-center justify-center p-3 transition-all duration-500 ${
+                        className={`w-32 h-32 sm:w-38 sm:h-48 md:w-48 md:h-48 lg:w-56 lg:h-56 bg-black/40 backdrop-blur-xl rounded-full border border-white/20 shadow-xl flex flex-col items-center justify-center p-3 transition-all duration-500 ${
                           isActive
-                            ? "bg-gradient-to-br from-black/40 via-black/20 to-orange-400/40 border-blue-400/60 shadow-2xl"
-                            : "hover:bg-white/20 hover:border-white/30"
+                            ? "bg-gradient-to-br from-black via-black to-orange-500 border-blue-400/60 shadow-2xl"
+                            : "hover:bg-white/20 hover:border-orange-500/50"
                         }`}
                       >
-                        {/* Only display the image */}
-                        <Image
-                          src={skill.image || "/placeholder.svg"}
-                          alt={skill.name}
-                          width={isActive ? 64 : 48}
-                          height={isActive ? 64 : 48}
-                          className={`transition-all duration-500 ${isActive ? "scale-110" : "group-hover:scale-105"}`}
+                        {/* Icon */}
+                        <skill.icon 
+                          className={`transition-all duration-500  mb-2 ${
+                            isActive ? "text-4xl sm:text-5xl md:text-6xl text-orange-500" : "text-2xl text-white sm:text-3xl md:text-4xl"
+                          }`} 
                         />
+                        
+                        {/* Show name and description only when active */}
+                        {isActive && (
+                          <div className="text-center">
+                            <h3 className="text-orange-500 font-semibold text-xs sm:text-sm md:text-base mb-1">
+                              {skill.name}
+                            </h3>
+                            <p className="text-orange-300 text-xs sm:text-sm leading-tight">
+                              {skill.description}
+                            </p>
+                          </div>
+                        )}
                       </div>
 
                       {/* Skill name tooltip for non-active items */}

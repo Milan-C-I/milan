@@ -273,7 +273,7 @@ const GetInTouch: React.FC = () => {
               }`}
               style={{ transitionDelay: '200ms' }}
             >
-              <div className="bg-gradient-to-tr from-black via-black to-orange-500 backdrop-blur-sm rounded-xl border border-gray-800 p-6 lg:p-8">
+              <div className="bg-gradient-to-tr from-black via-black to-orange-500/80 backdrop-blur-sm rounded-xl border border-gray-800 p-6 lg:p-8">
                 <h3 className="text-xl font-bold mb-6 text-orange-300">Send a Message</h3>
                 
                 <div className="space-y-6">
