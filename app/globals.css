@@ -19,6 +19,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -47,6 +51,28 @@ body {
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+@keyframes smoothFloat {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(5px, -5px);
+  }
+  50% {
+    transform: translate(-5px, 5px);
+  }
+  75% {
+    transform: translate(5px, 5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.floating {
+  animation: smoothFloat 12s ease-in-out infinite;
 }
 
 .slide-in-left {
