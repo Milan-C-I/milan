@@ -200,7 +200,7 @@ const SkillsPage: React.FC<SkillsPageProps> = ({ isVisible = true }) => {
                     {currentSkill.name}
                   </h2>
                 </div>
-                <p className="text-white/80 text-lg sm:text-xl font-medium">{currentSkill.category}</p>
+                <p className="text-orange-300 text-lg sm:text-xl font-medium">{currentSkill.category}</p>
               </div>
             </div>
 
@@ -243,13 +243,13 @@ const SkillsPage: React.FC<SkillsPageProps> = ({ isVisible = true }) => {
                         className={`w-32 h-32 sm:w-38 sm:h-48 md:w-48 md:h-48 lg:w-56 lg:h-56 bg-black/40 backdrop-blur-xl rounded-full border border-white/20 shadow-xl flex flex-col items-center justify-center p-3 transition-all duration-500 ${
                           isActive
                             ? "bg-gradient-to-br from-black via-black to-orange-500 border-blue-400/60 shadow-2xl"
-                            : "hover:bg-white/20 hover:border-orange-500/50"
+                            : "bg-gradient-to-br from-white via-white to-orange-500 hover:border-orange-500"
                         }`}
                       >
                         {/* Icon */}
                         <skill.icon 
                           className={`transition-all duration-500  mb-2 ${
-                            isActive ? "text-4xl sm:text-5xl md:text-6xl text-orange-500" : "text-2xl text-white sm:text-3xl md:text-4xl"
+                            isActive ? "text-4xl sm:text-5xl md:text-6xl text-orange-500" : "text-2xl text-black/50 sm:text-3xl md:text-4xl"
                           }`} 
                         />
                         

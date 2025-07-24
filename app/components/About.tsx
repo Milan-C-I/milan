@@ -260,7 +260,7 @@ const About: React.FC = () => {
   };
 
   return (
-    <div ref={aboutRef} className="min-h-screen text-white overflow-hidden">
+    <div ref={aboutRef} className="min-h-screen text-white overflow-hidden mb-12">
       <div className="relative">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -442,6 +442,7 @@ const About: React.FC = () => {
             }`}
             style={{ transitionDelay: '400ms' }}
           >
+            
             <h2 className="text-4xl font-bold mb-16 text-center">
               <FaGraduationCap className="inline-block mr-4 text-orange-400" />
               Education

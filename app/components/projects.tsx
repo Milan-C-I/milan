@@ -252,7 +252,7 @@ const Projects: React.FC = () => {
                       
                       {/* Project Name on Image */}
                       <div 
-                        className="absolute left-6 top-1/2 transform -translate-y-1/2"
+                        className="absolute left-6 bottom-0 transform -translate-y-1/2"
                         style={{
                           transform: isHovered 
                             ? 'translateY(-50%) translateX(-10%) translateZ(80px)' 
