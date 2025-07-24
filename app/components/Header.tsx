@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { ArrowDownTrayIcon } from '@heroicons/react/24/outline';
+import { GoDownload } from 'react-icons/go';
+import { MdOutlineFileDownload } from 'react-icons/md';
 
 interface HeaderProps {
   isVisible?: boolean;
@@ -17,12 +18,19 @@ const Header: React.FC<HeaderProps> = ({ isVisible = true }) => {
         <span className="text-white font-medium text-sm sm:text-base">Open to work</span>
       </div>
       
-      {/* Download CV Button */}
+      {/* Download Resume Button */}
       <div className={`z-10 ${isVisible ? 'fade-in' : 'opacity-0'}`}>
-        <button className="bg-amber-500 hover:bg-amber-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold flex items-center gap-2 hover-lift transition-all duration-300 shadow-lg text-sm sm:text-base">
-          <ArrowDownTrayIcon className="w-4 h-4 sm:w-5 sm:h-5" />
-          <span className="hidden sm:inline">Download CV</span>
-          <span className="sm:hidden">CV</span>
+        <button 
+        className={`w-fit mb-6 ${isVisible ? "slide-up" : "opacity-0 translate-y-8"} cursor-pointer
+    group flex items-center gap-2 px-4 py-2 rounded-lg bg-transparent
+    transition-all duration-300 transform-gpu
+    bg-gradient-to-br from-black via-black/80 to-orange-400 
+    scale-110 hover:shadow-xl shadow-orange-500/50
+  `}
+        >
+          <MdOutlineFileDownload className="w-4 h-4 text-orange-500 sm:w-5 sm:h-5 transition-all duration-300 group-hover:scale-110" />
+          <span className="sm:inline font-bold text-white transition-all duration-300 group-hover:text-white">Resume</span>
+          {/* <span className="sm:hidden">CV</span> */}
         </button>
       </div>
     </div>
