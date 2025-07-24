@@ -164,11 +164,12 @@ const SkillsPage: React.FC<SkillsPageProps> = ({ isVisible = true }) => {
     <div className="min-h-screen flex flex-col items-center relative overflow-hidden">
       {/* Edge fade effects */}
       {/* Header */}
-        <div className="text-center mb-8 sm:mb-12 z-20 relative">
-          <h1 className="text-white text-shadow font-black text-4xl sm:text-6xl lg:text-7xl mb-4 tracking-tight">
-            Skills
+        <div className={`my-4 sm:my-12 w-[80%] sm:mb-12 z-20 relative transition-all duration-1000 ease-out ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
+          <h1 className="text-white text-shadow font-black text-6xl md:text-8xl mb-4 tracking-tight">
+            SKILLS
           </h1>
-          <p className="text-white/85 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed font-light">
+          <p className="text-white/85 text-lg sm:text-xl max-w-2xl leading-relaxed font-light">
             Technologies and tools I work with to create amazing digital experiences
           </p>
         </div>
@@ -189,20 +190,9 @@ const SkillsPage: React.FC<SkillsPageProps> = ({ isVisible = true }) => {
         
 
         {/* Semi-circular Skills Display */}
-        <div className="absolute -top-10 md:top-40 lg:top-80 transform translate-y-128 w-full h-full flex-1 flex items-center justify-center">
+        <div className="absolute -top-10 sm:top-30 md:top-40 lg:top-80 transform translate-y-128 w-full h-full flex-1 flex items-center justify-center">
           <div className="relative w-full h-full max-w-6xl max-h-[70vh]">
-            {/* Current Skill Name Display - Above Progress Bar */}
-            <div className="absolute top-48 md:top-20 lg:-top-16 left-1/2 transform -translate-x-1/2 -translate-y-96 z-30">
-              <div className="text-center p-4 sm:p-6 sm:px-16 shadow-2xl">
-                <div className="flex items-center justify-center gap-3 mb-2">
-                  <currentSkill.icon className="text-3xl sm:text-4xl lg:text-5xl text-white" />
-                  <h2 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold text-shadow">
-                    {currentSkill.name}
-                  </h2>
-                </div>
-                <p className="text-orange-300 text-lg sm:text-xl font-medium">{currentSkill.category}</p>
-              </div>
-            </div>
+            
 
             {/* Rotating Semi-circular Skills Container */}
             <div
@@ -240,7 +230,7 @@ const SkillsPage: React.FC<SkillsPageProps> = ({ isVisible = true }) => {
                       }}
                     >
                       <div //card size
-                        className={`w-32 h-32 sm:w-38 sm:h-48 md:w-48 md:h-48 lg:w-56 lg:h-56 bg-black/40 backdrop-blur-xl rounded-full border border-white/20 shadow-xl flex flex-col items-center justify-center p-3 transition-all duration-500 ${
+                        className={`w-32 h-32 sm:w-38 sm:h-38 md:w-42 md:h-42 lg:w-56 lg:h-56 bg-black/40 backdrop-blur-xl rounded-full border border-white/20 shadow-xl flex flex-col items-center justify-center p-3 transition-all duration-500 ${
                           isActive
                             ? "bg-gradient-to-br from-black via-black to-orange-500 border-blue-400/60 shadow-2xl"
                             : "bg-gradient-to-br from-white via-white to-orange-500 hover:border-orange-500"
@@ -282,6 +272,18 @@ const SkillsPage: React.FC<SkillsPageProps> = ({ isVisible = true }) => {
           </div>
         </div>
 
+        {/* Current Skill Name Display - Above Progress Bar */}
+            <div className="w-full max-w-2xs md:max-w-xl lg:max-w-xl mx-auto mb-8 z-20 absolute bottom-72 md:bottom-56">
+              <div className="text-center p-4 sm:p-6 sm:px-16 shadow-2xl">
+                <div className="flex items-center justify-center gap-3 mb-2">
+                  <currentSkill.icon className="text-3xl sm:text-4xl lg:text-5xl text-white" />
+                  <h2 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold text-shadow">
+                    {currentSkill.name}
+                  </h2>
+                </div>
+                <p className="text-orange-300 text-lg sm:text-xl font-medium">{currentSkill.category}</p>
+              </div>
+            </div>
         {/* Progress Bar - Simple design */}
         <div className="w-full max-w-2xs md:max-w-xl lg:max-w-xl mx-auto mb-8 z-20 absolute bottom-60 md:bottom-48">
           <div className="mb-4 text-center">
