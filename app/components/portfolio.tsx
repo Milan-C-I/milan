@@ -63,9 +63,9 @@ const Portfolio: React.FC = () => {
 
   return (
     <>
-      <div className="relative min-h-screen overflow-hidden font-inter">
+      <div className="relative scroll-smooth min-h-screen overflow-hidden font-inter">
         {/* Animated Background */}
-        <div className="fixed inset-0 -z-10 animated-gradient" style={{ opacity: 0.9 }} />
+        
         {/* <div className="fixed inset-0 -z-10 animated-gradient1" style={{opacity: 0.9}}/> */}
         {/* Header */}
         <Header isVisible={isVisible}/>
