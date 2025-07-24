@@ -8,7 +8,11 @@ import {
   WrenchScrewdriverIcon,
   LinkIcon,
 } from '@heroicons/react/24/outline';
-
+import { GoHome } from "react-icons/go";
+import { RiUserLine } from "react-icons/ri";
+import { IoFolderOutline } from "react-icons/io5";
+import { VscTools } from "react-icons/vsc";
+import { MdOutlineLink } from "react-icons/md";
 interface NavbarProps {
   activeTab: string;
   onTabChange: (tab: string) => void;
@@ -21,11 +25,11 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, onTabChange, isVisible = tru
   const itemRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   const navItems = [
-    { icon: HomeIcon, label: 'Home', id: 'home' },
-    { icon: BriefcaseIcon, label: 'About', id: 'about' },
-    { icon: UserIcon, label: 'Projects', id: 'projects' },
-    { icon: WrenchScrewdriverIcon, label: 'Skills', id: 'skills' },
-    { icon: LinkIcon, label: 'Links', id: 'links' },
+    { icon: GoHome, label: 'Home', id: 'home' },
+    { icon: RiUserLine, label: 'About', id: 'about' },
+    { icon: IoFolderOutline, label: 'Projects', id: 'projects' },
+    { icon: VscTools, label: 'Skills', id: 'skills' },
+    { icon: MdOutlineLink, label: 'Links', id: 'links' },
   ];
 
   const updateIndicator = () => {
@@ -95,7 +99,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, onTabChange, isVisible = tru
                 key={item.id}
                 ref={el => {itemRefs.current[index] = el}}
                 onClick={() => handleTabClick(item.id)}
-                className={`relative z-10 px-3 py-2 sm:px-4 sm:py-3 rounded-full font-medium flex items-center gap-1.5 sm:gap-2 transition-all duration-300 text-xs sm:text-sm md:text-base group ${
+                className={`relative z-10 px-3 py-2 sm:px-4 sm:py-3 rounded-full font-medium flex items-center gap-1.5 sm:gap-2 transition-all duration-300 text-xs sm:text-sm md:text-base cursor-pointer group ${
                   isActive 
                     ? 'text-orange-200 scale-105' 
                     : 'text-white/70 hover:text-white hover:scale-105'
