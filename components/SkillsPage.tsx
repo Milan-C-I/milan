@@ -8,7 +8,6 @@ import {
   SiTypescript, 
   SiTailwindcss, 
   SiNodedotjs, 
-  SiExpress, 
   SiPython, 
   SiMongodb, 
   SiPostgresql, 
@@ -19,15 +18,14 @@ import {
   SiUnity,
   SiGithub,
   SiPrisma,
-  SiAuth0,
   SiStorybook,
   SiSocketdotio,
   SiUipath,
-  SiSupabase,
   SiMysql,
   SiCss3,
   SiHtml5,
   SiCplusplus,
+  SiLaravel,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
@@ -75,7 +73,7 @@ const SkillsPage: React.FC<SkillsPageProps> = () => {
   { id: 19, name: "Socket.io", icon: SiSocketdotio, category: "Real-time", description: "Real-time communication engine" },
   { id: 20, name: "Storybook.js", icon: SiStorybook, category: "UI", description: "Component explorer for UI development" },
   { id: 21, name: "React Native", icon: SiReact, category: "Mobile", description: "Build native apps using React" },
-  { id: 22, name: "Auth.js", icon: SiAuth0, category: "Authentication", description: "Authentication for JavaScript apps" },
+  { id: 22, name: "Laravel", icon: SiLaravel, category: "Authentication", description: "Authentication for JavaScript apps" },
   { id: 23, name: "Prisma ORM", icon: SiPrisma, category: "Database", description: "Next-gen ORM for TypeScript" },
   { id: 24, name: "Git", icon: SiGit, category: "DevOps", description: "Version control system" },
   { id: 25, name: "GitHub", icon: SiGithub, category: "DevOps", description: "Code hosting and collaboration" },
@@ -194,7 +192,7 @@ const SkillsPage: React.FC<SkillsPageProps> = () => {
             SKILLS
           </h1>
           <p className="text-white/85 text-lg sm:text-xl max-w-2xl leading-relaxed font-light">
-            Technologies and tools I work with to create amazing digital experiences
+            <span className="text-orange-400 font-bold">Technologies</span> and <span className="text-orange-400 font-bold">tools</span> I work with to create amazing digital experiences
           </p>
         </div>
       <div className="absolute inset-0 pointer-events-none">
