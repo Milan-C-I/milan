@@ -118,19 +118,19 @@ const GetInTouch: React.FC = () => {
     {
       icon: FaEnvelope,
       label: "Email",
-      value: "milanchonvamancp@gmail.com",
-      href: "mailto:milanchonvamancp@gmail.com"
+      value: "milancheriyamanep@gmail.com",
+      href: "mailto:milancheriyamanep@gmail.com"
     },
     {
       icon: FaPhone,
       label: "Phone",
-      value: "+91 7019086645",
-      href: "tel:+917019086645"
+      value: "+91 7019085645",
+      href: "tel:+917019085645"
     },
     {
       icon: FaMapMarkerAlt,
       label: "Location",
-      value: "Bengaluru, Karnataka, IN",
+      value: "Mangaluru, Karnataka, IN",
       href: "#"
     }
   ];
@@ -139,7 +139,7 @@ const GetInTouch: React.FC = () => {
     {
       icon: FaGithub,
       label: "GitHub",
-      href: "https://github.com/milan-ci",
+      href: "https://github.com/Milan-C-I",
       color: "hover:text-gray-300"
     },
     {
@@ -151,7 +151,7 @@ const GetInTouch: React.FC = () => {
     {
       icon: FaInstagram,
       label: "Instagram",
-      href: "https://instagram.com/milan_ci",
+      href: "https://instagram.com/_.m_ilan._",
       color: "hover:text-pink-400"
     }
   ];
