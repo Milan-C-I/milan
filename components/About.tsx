@@ -7,9 +7,15 @@ import {
   SiTypescript, 
   SiNodedotjs, 
   SiMongodb, 
-  SiAwsamplify 
+  SiAwsamplify, 
+  SiTailwindcss,
+  SiJavascript,
+  SiCss3,
+  SiHtml5,
+  SiPhp,
+  SiMysql
 } from "react-icons/si";
-import { FaGraduationCap, FaBriefcase, FaMapMarkerAlt, FaCalendarAlt } from "react-icons/fa";
+import { FaGraduationCap, FaBriefcase, FaMapMarkerAlt, FaCalendarAlt, FaLaravel } from "react-icons/fa";
 
 const About: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -155,73 +161,76 @@ const About: React.FC = () => {
   };
 
   const experiences = [
-    {
-      id: 1,
-      title: "Senior Full Stack Developer",
-      company: "TechCorp Solutions",
-      location: "Bengaluru, Karnataka",
-      period: "Jan 2024 - Present",
-      description: "Led development of enterprise-level web applications serving 100K+ users. Implemented microservices architecture, optimized database queries reducing response time by 40%, and mentored junior developers in best practices.",
-      achievements: [
-        "Reduced application load time by 50%",
-        "Led team of 5 developers",
-        "Implemented CI/CD pipeline"
-      ],
-      technologies: ["React", "Next.js", "TypeScript", "Node.js", "MongoDB", "AWS"]
-    },
-    {
-      id: 2,
-      title: "Full Stack Developer",
-      company: "InnovateTech",
-      location: "Bengaluru, Karnataka",
-      period: "Jun 2022 - Dec 2023",
-      description: "Developed and maintained multiple client projects using modern web technologies. Collaborated with cross-functional teams to deliver high-quality solutions on time and within budget.",
-      achievements: [
-        "Delivered 15+ successful projects",
-        "Improved code quality by 60%",
-        "Mentored 3 junior developers"
-      ],
-      technologies: ["React", "Node.js", "Python", "Django", "PostgreSQL"]
-    },
-    {
-      id: 3,
-      title: "Junior Developer",
-      company: "StartupHub",
-      location: "Bengaluru, Karnataka",
-      period: "Jan 2022 - May 2022",
-      description: "Started my professional journey building responsive web applications and learning industry best practices.",
-      achievements: [
-        "Built 5+ responsive websites",
-        "Learned modern development workflows",
-        "Contributed to open source projects"
-      ],
-      technologies: ["HTML", "CSS", "JavaScript", "React"]
-    }
-  ];
+  {
+    id: 1,
+    title: "Freelance Web Developer",
+    company: "Kreekarvat Technologies",
+    location: "Mangaluru, Karnataka",
+    period: "Nov 2024 - Mar 2025",
+    description: "Built responsive, high-quality UIs using React, Next.js, and Tailwind CSS. Collaborated with freelance teams to deliver projects on time while ensuring client satisfaction.",
+    achievements: [
+      "Developed responsive and user-friendly web interfaces",
+      "Delivered multiple client projects on time",
+      "Implemented modern UI/UX best practices using Tailwind CSS"
+    ],
+    technologies: ["React", "Next.js", "Tailwind CSS", "JavaScript", "HTML", "CSS"]
+  },
+  {
+    id: 2,
+    title: "Full Stack Developer Intern",
+    company: "A J Institute of Medical Sciences and Research Center",
+    location: "Mangaluru, Karnataka",
+    period: "Sept 2023 - Aug 2024",
+    description: "Built full-stack healthcare management apps using modern frontend tools and collaborated with cross-functional teams to ensure timely delivery.",
+    achievements: [
+      "Built responsive web apps for healthcare systems",
+      "Collaborated with teams and clients to gather and implement requirements",
+      "Improved user experience through modern UI techniques"
+    ],
+    technologies: ["React", "Next.js", "Tailwind CSS", "JavaScript", "Node.js", "HTML", "CSS"]
+  },
+  {
+    id: 3,
+    title: "Core Team Member",
+    company: "DevNation",
+    location: "Mangaluru, Karnataka",
+    period: "Oct 2024 - Mar 2025",
+    description: "Organized events and led open-source community projects. Focused on team coordination, project management, and community engagement through tech workshops.",
+    achievements: [
+      "Organized technical webinars and workshops",
+      "Led and contributed to community-driven web projects",
+      "Improved project management and collaboration skills"
+    ],
+    technologies: ["React", "Next.js", "TypeScript", "Node.js","Laravel", "PHP", "Blade", "JavaScript", "MySQL", "MongoDB", "HTML", "CSS", "Tailwind CSS"]
+  }
+];
 
   const education = [
     {
       id: 1,
-      qualification: "B.E in Computer Science Engineering",
+      qualification: "B.E in Computer Science & Engineering",
       institution: "Visvesvaraya Technological University",
-      location: "Bengaluru, Karnataka",
-      period: "2018 - 2022",
-      description: "Graduated with First Class Honours. Specialized in Software Engineering, Data Structures, and Web Development. Led multiple technical projects and participated in hackathons."
+      location: "Mangaluru, Karnataka",
+      period: "2022 - 2026",
+      marks: "8.68 CGPA",
+      description: "Pursuing undergraduate degree with focus on full-stack web development, UI/UX design, and software development."
     },
     {
       id: 2,
       qualification: "Pre-University Course (PUC)",
-      institution: "Delhi Public School",
-      location: "Bengaluru, Karnataka",
-      period: "2016 - 2018",
-      description: "Completed with distinction in Science stream. Active member of computer club and robotics team."
+      institution: "St. Joseph's Pre University Composite College",
+      location: "Madikeri, Karnataka",
+      period: "2020 - 2022",
+      marks: "94.03%",
+      description: "Completed with distinction in the Science stream with a focus on Physics, Chemistry, Mathematics, and Biology (PCMB)."
     },
     {
       id: 3,
       qualification: "Secondary School Certificate (SSLC)",
-      institution: "Delhi Public School",
-      location: "Bengaluru, Karnataka", 
-      period: "2015 - 2016",
+      institution: "St. Joseph's High School",
+      location: "Madikeri, Karnataka", 
+      period: "2019 - 2020",
+      marks: "94.44%",
       description: "Completed with excellent grades. Developed early interest in computer programming and technology."
     }
   ];
@@ -231,9 +240,16 @@ const About: React.FC = () => {
       'React': SiReact,
       'Next.js': SiNextdotjs,
       'TypeScript': SiTypescript,
+      'JavaScript': SiJavascript,
       'Node.js': SiNodedotjs,
       'MongoDB': SiMongodb,
-      'AWS': SiAwsamplify,
+      'Tailwind CSS': SiTailwindcss,
+      'CSS': SiCss3,
+      'HTML': SiHtml5,
+      'Laravel': FaLaravel,
+      'PHP': SiPhp,
+      'Blade': FaLaravel,
+      'MySQL': SiMysql,
     };
     return iconMap[tech] || SiReact;
   };
@@ -281,8 +297,9 @@ const About: React.FC = () => {
               ABOUT
             </h1>
             <p className="md:text-xl text-gray-300 max-w-4xl leading-relaxed">
-              Passionate Full Stack Developer building efficient, scalable, and user-friendly web applications
-            </p>
+  Creative Full Stack Developer crafting fast, seamless, and user-focused web experiences with a blend of logic and design.
+</p>
+
           </div>
 
           {/* About Me Section */}
@@ -298,15 +315,12 @@ const About: React.FC = () => {
               <div className="relative z-10">
                 <h2 className="text-5xl w-fit font-extrabold mb-6 text-orange-400 transition-all duration-500 transform origin-left hover:tracking-widest hover:scale-110">Milan C I</h2>
                 <p className="md:text-lg text-gray-300 leading-relaxed mb-6">
-                  I specialize in crafting seamless experiences from front-end interfaces to back-end systems. 
-                  With a passion for clean code and thoughtful design, I bring ideas to life through innovative 
-                  web solutions that make a difference.
+                  I’m a <span className="font-bold text-orange-400">full-stack web developer</span> who enjoys building both intuitive user interfaces and robust back-end systems. I focus on writing clean, maintainable code and creating applications that are both performant and user-friendly.
                 </p>
                 <p className="md:text-lg text-gray-300 leading-relaxed">
-                  My journey in software development has been driven by curiosity and a desire to solve 
-                  complex problems. I thrive in collaborative environments and enjoy mentoring fellow 
-                  developers while continuously learning new technologies.
+                  With a growing interest in <span className="font-bold text-orange-400">UI/UX design</span>, I aim to bridge the gap between functionality and aesthetics. I'm always eager to learn, improve, and collaborate with others to bring ideas to life through the web.
                 </p>
+
               </div>
             </div>
           </div>
@@ -507,9 +521,8 @@ const About: React.FC = () => {
                           </div>
                         </div>
                         
-                        <p className={`text-gray-200 leading-relaxed ${
-                          index % 2 !== 0 ? 'md:text-left' : ''
-                        }`}>{edu.description}</p>
+                        <p className={`text-gray-200 leading-relaxed `}>{edu.description}</p>
+                        <p className={`text-orange-400 font-bold leading-relaxed `}>{edu.marks}</p>
                       </div>
                     </TiltCard>
                   </div>
