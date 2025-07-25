@@ -6,24 +6,31 @@ import {
   SiNextdotjs, 
   SiTypescript, 
   SiTailwindcss, 
-  SiVuedotjs, 
   SiNodedotjs, 
   SiExpress, 
   SiPython, 
-  SiDjango, 
   SiMongodb, 
   SiPostgresql, 
   SiFirebase, 
-  SiAwsamplify, 
-  SiRedis, 
   SiGit, 
-  SiDocker, 
-  SiVsco, 
-  SiLinux, 
-  SiFigma 
+  SiFigma, 
+  SiJavascript,
+  SiUnity,
+  SiGithub,
+  SiPrisma,
+  SiAuth0,
+  SiStorybook,
+  SiSocketdotio,
+  SiUipath,
+  SiSupabase,
+  SiMysql,
+  SiCss3,
+  SiHtml5,
+  SiCplusplus,
 } from "react-icons/si";
-import { FaServer } from "react-icons/fa";
+import { FaJava } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
+import { TbBrandCSharp } from "react-icons/tb";
 const Skills: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [visibleLetters, setVisibleLetters] = useState(0);
@@ -96,27 +103,35 @@ const Skills: React.FC = () => {
   }, []);
 
   const allSkills = [
-    { name: "React.js", icon: SiReact, description: "Component-based UI library" },
-    { name: "Next.js", icon: SiNextdotjs, description: "Full-stack React framework" },
-    { name: "TypeScript", icon: SiTypescript, description: "Typed JavaScript superset" },
-    { name: "Tailwind CSS", icon: SiTailwindcss, description: "Utility-first CSS framework" },
-    { name: "Vue.js", icon: SiVuedotjs, description: "Progressive JavaScript framework" },
-    { name: "Node.js", icon: SiNodedotjs, description: "JavaScript runtime environment" },
-    { name: "Express.js", icon: SiExpress, description: "Web application framework" },
-    { name: "Python", icon: SiPython, description: "High-level programming language" },
-    { name: "Django", icon: SiDjango, description: "Python web framework" },
-    { name: "REST APIs", icon: FaServer, description: "RESTful web services" },
-    { name: "MongoDB", icon: SiMongodb, description: "NoSQL document database" },
-    { name: "PostgreSQL", icon: SiPostgresql, description: "Relational database system" },
-    { name: "Firebase", icon: SiFirebase, description: "Backend-as-a-Service platform" },
-    { name: "AWS", icon: SiAwsamplify, description: "Cloud computing services" },
-    { name: "Redis", icon: SiRedis, description: "In-memory data structure store" },
-    { name: "Git", icon: SiGit, description: "Version control system" },
-    { name: "Docker", icon: SiDocker, description: "Containerization platform" },
-    { name: "VS Code", icon: VscVscode, description: "Source code editor" },
-    { name: "Linux", icon: SiLinux, description: "Open-source operating system" },
-    { name: "Figma", icon: SiFigma, description: "Design and prototyping tool" },
-  ];
+  { name: "React.js", icon: SiReact, description: "Component-based UI library" },
+  { name: "Next.js", icon: SiNextdotjs, description: "Full-stack React framework" },
+  { name: "Node.js", icon: SiNodedotjs, description: "JavaScript runtime environment" },
+  { name: "JavaScript", icon: SiJavascript, description: "Dynamic programming language" },
+  { name: "TypeScript", icon: SiTypescript, description: "Typed JavaScript superset" },
+  { name: "C/C++", icon: SiCplusplus, description: "Object-oriented systems programming language" },
+  { name: "C#", icon: TbBrandCSharp, description: "Modern object-oriented language by Microsoft" },
+  { name: "Python", icon: SiPython, description: "High-level programming language" },
+  { name: "Java", icon: FaJava, description: "Object-oriented, platform-independent language" },
+  { name: "HTML", icon: SiHtml5, description: "Markup language for web pages" },
+  { name: "CSS", icon: SiCss3, description: "Style sheet language for web design" },
+  { name: "Tailwind CSS", icon: SiTailwindcss, description: "Utility-first CSS framework" },
+  { name: "SQL", icon: SiMysql, description: "Language for relational databases" },
+  { name: "PostgreSQL", icon: SiPostgresql, description: "Open-source relational database" },
+  { name: "MongoDB", icon: SiMongodb, description: "NoSQL document database" },
+  { name: "Firebase", icon: SiFirebase, description: "Google's backend-as-a-service platform" },
+  { name: "UiPath", icon: SiUipath, description: "Robotic process automation tool" },
+  { name: "Socket.io", icon: SiSocketdotio, description: "Real-time web socket communication" },
+  { name: "Storybook.js", icon: SiStorybook, description: "UI component explorer for React" },
+  { name: "React Native", icon: SiReact, description: "Mobile development with React" },
+  { name: "Auth.js", icon: SiAuth0, description: "Authentication for JavaScript apps" },
+  { name: "Prisma ORM", icon: SiPrisma, description: "Next-gen ORM for Node.js & TypeScript" },
+  { name: "Git", icon: SiGit, description: "Version control system" },
+  { name: "GitHub", icon: SiGithub, description: "Hosting for software development" },
+  { name: "VS Code", icon: VscVscode, description: "Code editor by Microsoft" },
+  { name: "Unity", icon: SiUnity, description: "Game development platform" },
+  { name: "Figma", icon: SiFigma, description: "Collaborative interface design tool" },
+];
+
 
   return (
     <div className="bg-none text-white overflow-hidden">

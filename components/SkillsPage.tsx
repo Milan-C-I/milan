@@ -7,24 +7,31 @@ import {
   SiNextdotjs, 
   SiTypescript, 
   SiTailwindcss, 
-  SiVuedotjs, 
   SiNodedotjs, 
   SiExpress, 
   SiPython, 
-  SiDjango, 
   SiMongodb, 
   SiPostgresql, 
   SiFirebase, 
-  SiAwsamplify, 
-  SiRedis, 
   SiGit, 
-  SiDocker, 
-  SiLinux, 
-  SiFigma 
-} from "react-icons/si"
-import { FaServer } from "react-icons/fa"
-import { VscVscode } from "react-icons/vsc"
-
+  SiFigma, 
+  SiJavascript,
+  SiUnity,
+  SiGithub,
+  SiPrisma,
+  SiAuth0,
+  SiStorybook,
+  SiSocketdotio,
+  SiUipath,
+  SiSupabase,
+  SiMysql,
+  SiCss3,
+  SiHtml5,
+  SiCplusplus,
+} from "react-icons/si";
+import { FaJava } from "react-icons/fa";
+import { VscVscode } from "react-icons/vsc";
+import { TbBrandCSharp } from "react-icons/tb";
 interface Skill {
   id: number
   name: string
@@ -48,27 +55,35 @@ const SkillsPage: React.FC<SkillsPageProps> = () => {
 
   // Updated skills data with icons
   const skills: Skill[] = [
-    { id: 1, name: "React.js", icon: SiReact, category: "Frontend", description: "Component-based UI library" },
-    { id: 2, name: "Next.js", icon: SiNextdotjs, category: "Framework", description: "Full-stack React framework" },
-    { id: 3, name: "TypeScript", icon: SiTypescript, category: "Language", description: "Typed JavaScript superset" },
-    { id: 4, name: "Tailwind CSS", icon: SiTailwindcss, category: "Styling", description: "Utility-first CSS framework" },
-    { id: 5, name: "Vue.js", icon: SiVuedotjs, category: "Frontend", description: "Progressive JavaScript framework" },
-    { id: 6, name: "Node.js", icon: SiNodedotjs, category: "Backend", description: "JavaScript runtime environment" },
-    { id: 7, name: "Express.js", icon: SiExpress, category: "Backend", description: "Web application framework" },
-    { id: 8, name: "Python", icon: SiPython, category: "Language", description: "High-level programming language" },
-    { id: 9, name: "Django", icon: SiDjango, category: "Framework", description: "Python web framework" },
-    { id: 10, name: "REST APIs", icon: FaServer, category: "API", description: "RESTful web services" },
-    { id: 11, name: "MongoDB", icon: SiMongodb, category: "Database", description: "NoSQL document database" },
-    { id: 12, name: "PostgreSQL", icon: SiPostgresql, category: "Database", description: "Relational database system" },
-    { id: 13, name: "Firebase", icon: SiFirebase, category: "Backend", description: "Backend-as-a-Service platform" },
-    { id: 14, name: "AWS", icon: SiAwsamplify, category: "Cloud", description: "Cloud computing services" },
-    { id: 15, name: "Redis", icon: SiRedis, category: "Database", description: "In-memory data structure store" },
-    { id: 16, name: "Git", icon: SiGit, category: "DevOps", description: "Version control system" },
-    { id: 17, name: "Docker", icon: SiDocker, category: "DevOps", description: "Containerization platform" },
-    { id: 18, name: "VS Code", icon: VscVscode, category: "Tools", description: "Source code editor" },
-    { id: 19, name: "Linux", icon: SiLinux, category: "OS", description: "Open-source operating system" },
-    { id: 20, name: "Figma", icon: SiFigma, category: "Design", description: "Design and prototyping tool" },
-  ]
+  { id: 1, name: "React.js", icon: SiReact, category: "Frontend", description: "Component-based UI library" },
+  { id: 2, name: "Next.js", icon: SiNextdotjs, category: "Framework", description: "Full-stack React framework" },
+  { id: 3, name: "Node.js", icon: SiNodedotjs, category: "Backend", description: "JavaScript runtime environment" },
+  { id: 4, name: "JavaScript", icon: SiJavascript, category: "Language", description: "Dynamic programming language" },
+  { id: 5, name: "TypeScript", icon: SiTypescript, category: "Language", description: "Typed JavaScript superset" },
+  { id: 7, name: "C/C++", icon: SiCplusplus, category: "Language", description: "Object-oriented systems language" },
+  { id: 8, name: "C#", icon: TbBrandCSharp, category: "Language", description: "Modern object-oriented language" },
+  { id: 9, name: "Python", icon: SiPython, category: "Language", description: "High-level programming language" },
+  { id: 10, name: "Java", icon: FaJava, category: "Language", description: "Platform-independent OOP language" },
+  { id: 11, name: "HTML", icon: SiHtml5, category: "Frontend", description: "Markup language for web pages" },
+  { id: 12, name: "CSS", icon: SiCss3, category: "Styling", description: "Style sheet language for design" },
+  { id: 13, name: "Tailwind CSS", icon: SiTailwindcss, category: "Styling", description: "Utility-first CSS framework" },
+  { id: 14, name: "SQL", icon: SiMysql, category: "Database", description: "Relational query language" },
+  { id: 15, name: "PostgreSQL", icon: SiPostgresql, category: "Database", description: "Advanced relational database" },
+  { id: 16, name: "MongoDB", icon: SiMongodb, category: "Database", description: "NoSQL document database" },
+  { id: 17, name: "Firebase", icon: SiFirebase, category: "Backend", description: "Google's BaaS platform" },
+  { id: 18, name: "UiPath", icon: SiUipath, category: "Automation", description: "Robotic process automation tool" },
+  { id: 19, name: "Socket.io", icon: SiSocketdotio, category: "Real-time", description: "Real-time communication engine" },
+  { id: 20, name: "Storybook.js", icon: SiStorybook, category: "UI", description: "Component explorer for UI development" },
+  { id: 21, name: "React Native", icon: SiReact, category: "Mobile", description: "Build native apps using React" },
+  { id: 22, name: "Auth.js", icon: SiAuth0, category: "Authentication", description: "Authentication for JavaScript apps" },
+  { id: 23, name: "Prisma ORM", icon: SiPrisma, category: "Database", description: "Next-gen ORM for TypeScript" },
+  { id: 24, name: "Git", icon: SiGit, category: "DevOps", description: "Version control system" },
+  { id: 25, name: "GitHub", icon: SiGithub, category: "DevOps", description: "Code hosting and collaboration" },
+  { id: 26, name: "VS Code", icon: VscVscode, category: "Tools", description: "Code editor by Microsoft" },
+  { id: 27, name: "Unity", icon: SiUnity, category: "Game Dev", description: "Game development platform" },
+  { id: 28, name: "Figma", icon: SiFigma, category: "Design", description: "Collaborative interface design tool" },
+];
+
 
   const totalSkills = skills.length
   // Semi-circle: 180 degrees total
@@ -186,7 +201,7 @@ const SkillsPage: React.FC<SkillsPageProps> = () => {
         {/* Top fade */}
         {/* <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black/40 via-black/20 to-transparent backdrop-blur-sm z-10" /> */}
         {/* Bottom fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/40 via-black/20 to-transparent backdrop-blur-sm z-10" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/40 via-black/20 to-transparent backdrop-blur-xs z-10" />
         {/* Left fade */}
         {/* <div className="absolute top-0 bottom-0 left-0 w-32 bg-gradient-to-r from-black/40 via-black/20 to-transparent backdrop-blur-sm z-10" /> */}
         {/* Right fade */}
@@ -283,7 +298,7 @@ const SkillsPage: React.FC<SkillsPageProps> = () => {
 
         {/* Current Skill Name Display - Above Progress Bar */}
             <div className="w-full max-w-2xs md:max-w-xl lg:max-w-xl mx-auto mb-8 z-20 absolute bottom-72 md:bottom-56">
-              <div className="text-center p-4 sm:p-6 sm:px-16 shadow-2xl">
+              <div className="text-center p-4 sm:p-6 sm:px-16">
                 <div className="flex items-center justify-center gap-3 mb-2">
                   <currentSkill.icon className="text-3xl sm:text-4xl lg:text-5xl text-white" />
                   <h2 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold text-shadow">
