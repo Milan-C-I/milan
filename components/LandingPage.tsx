@@ -25,7 +25,7 @@ const LandingPage: React.FC<LandingPageProps> = ({
   email = "milancheriyamanep@gmail.com",
   linkedin = "linkedin.com/in/milan-ci",
   phone = "+91 7019085645",
-  location = "Bengaluru, IN",
+  location = "Mangaluru, IN",
   isVisible = true,
 }) => {
   const [mounted, setMounted] = useState(false)
@@ -46,7 +46,7 @@ const LandingPage: React.FC<LandingPageProps> = ({
     {
       icon: FaGithub,
       label: "GitHub",
-      href: "https://github.com/milan-ci",
+      href: "https://github.com/Milan-C-I",
       color: "hover:text-gray-300",
     },
     {
@@ -58,7 +58,7 @@ const LandingPage: React.FC<LandingPageProps> = ({
     {
       icon: FaInstagram,
       label: "Instagram",
-      href: "https://instagram.com/milan_ci",
+      href: "https://instagram.com/_.m_ilan._",
       color: "hover:text-pink-400",
     },
   ]
@@ -92,7 +92,7 @@ const LandingPage: React.FC<LandingPageProps> = ({
         {/* Description */}
         <div className={`mb-12 max-w-2xl ${isVisible ? "slide-up" : "opacity-0 translate-y-8"}`}>
           <p className="text-white/85 text-base sm:text-lg lg:text-xl leading-relaxed font-light">
-            Passionate Full Stack Developer building efficient, scalable, and user-friendly web applications. I
+            Passionate <span className="font-bold text-orange-400">Full Stack Developer</span> building efficient, scalable,aesthetics and user-friendly web applications. I
             specialize in crafting seamless experiences from front-end interfaces to back-end systems. Let's bring ideas
             to life with clean code and thoughtful design.
           </p>
@@ -109,7 +109,7 @@ const LandingPage: React.FC<LandingPageProps> = ({
           `}
         >
           <FaHandshakeAngle className="text-orange-500 text-xl group-hover:text-orange-500 transition-all duration-300 group-hover:scale-120" />
-          <span className="text-sm font-semibold text-black group-hover:text-black">Connect</span>
+          <span className="text-sm font-semibold text-black">Connect</span>
         </a>
 
         {/* Contact Information */}
