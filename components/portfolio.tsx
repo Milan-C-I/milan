@@ -68,7 +68,7 @@ const Portfolio: React.FC = () => {
         
         {/* <div className="fixed inset-0 -z-10 animated-gradient1" style={{opacity: 0.9}}/> */}
         {/* Header */}
-        <Header isVisible={isVisible}/>
+        <Header/>
 
         {/* Main Content */}
         <div className="relative">
@@ -76,7 +76,7 @@ const Portfolio: React.FC = () => {
 
           {/* Navigation Bar */}
           <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-10">
-            <Navbar activeTab={activeTab} onTabChange={handleTabChange} isVisible={isVisible} />
+            <Navbar/>
           </div>
         </div>
 

@@ -37,9 +37,10 @@ interface SkillsPageProps {
   isVisible?: boolean
 }
 
-const SkillsPage: React.FC<SkillsPageProps> = ({ isVisible = true }) => {
+const SkillsPage: React.FC<SkillsPageProps> = () => {
   const [currentSkillIndex, setCurrentSkillIndex] = useState(0)
   const [rotation, setRotation] = useState(0)
+  const [isVisible, setIsVisible] = useState(false)
   const progressRef = useRef<HTMLDivElement>(null)
   const [isDragging, setIsDragging] = useState(false)
   const [dragStartX, setDragStartX] = useState(0)
@@ -156,6 +157,14 @@ const SkillsPage: React.FC<SkillsPageProps> = ({ isVisible = true }) => {
 
     return () => clearInterval(interval)
   }, [isDragging, totalSkills, angleStep])
+
+  useEffect(() => {
+    const interval = setTimeout(() => {
+      setIsVisible(true);
+    },300);
+
+    return () => clearTimeout(interval);
+  },[])
 
   const currentSkill = skills[currentSkillIndex]
   const progressPercentage = (currentSkillIndex / (totalSkills - 1)) * 100

@@ -220,7 +220,7 @@ const ProjectsPage: React.FC = () => {
         ))}
       </div>
 
-      <div className="relative z-10 container mx-auto px-6 py-20">
+      <div className="relative z-10 container mx-auto px-6 py-12 md:py-20">
         {/* Header Section */}
         <div className={`mb-16 transform transition-all duration-1000 ease-out ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
@@ -228,7 +228,7 @@ const ProjectsPage: React.FC = () => {
           <h1 className="text-6xl md:text-8xl font-black mb-12">
             PROJECTS
           </h1>
-          <p className="text-xl text-gray-300 max-w-4xl leading-relaxed mb-12">
+          <p className="md:text-xl text-gray-300 max-w-4xl leading-relaxed mb-12">
             A showcase of my technical expertise and creative problem-solving through innovative web applications
           </p>
         </div>

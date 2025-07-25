@@ -89,7 +89,7 @@ body {
     #3300ff,
     #00c0ff
   ); */
-  background: radial-gradient(circle at right, orange 0%,  black 50% );
+  background: radial-gradient(circle at right, orange 0%,  black 60% );
 
   /* background-size: 200% 200%; */
   /* animation: gradientShift 4s ease infinite; */

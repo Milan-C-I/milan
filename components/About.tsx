@@ -269,18 +269,18 @@ const About: React.FC = () => {
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-orange-500/20 rounded-full animate-spin-slow"></div>
         </div>
 
-        <div className="relative z-10 container mx-auto px-6 py-20">
+        <div className="relative z-10 container mx-auto px-6 py-12 md:py-20">
           {/* Header Section */}
           <div 
             data-index={0}
-            className={`animated-section mb-20 transform transition-all duration-600 ease-out ${
+            className={`animated-section mb-6 md:mb-20 transform transition-all duration-600 ease-out ${
               visibleSections[0] ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'
             }`}
           >
             <h1 className="text-6xl md:text-8xl font-black mb-12 text-white">
               ABOUT
             </h1>
-            <p className="text-xl text-gray-300 max-w-4xl leading-relaxed">
+            <p className="md:text-xl text-gray-300 max-w-4xl leading-relaxed">
               Passionate Full Stack Developer building efficient, scalable, and user-friendly web applications
             </p>
           </div>
@@ -297,12 +297,12 @@ const About: React.FC = () => {
               <div className="absolute inset-0 rounded-2xl"></div>
               <div className="relative z-10">
                 <h2 className="text-5xl w-fit font-extrabold mb-6 text-orange-400 transition-all duration-500 transform origin-left hover:tracking-widest hover:scale-110">Milan C I</h2>
-                <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                <p className="md:text-lg text-gray-300 leading-relaxed mb-6">
                   I specialize in crafting seamless experiences from front-end interfaces to back-end systems. 
                   With a passion for clean code and thoughtful design, I bring ideas to life through innovative 
                   web solutions that make a difference.
                 </p>
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="md:text-lg text-gray-300 leading-relaxed">
                   My journey in software development has been driven by curiosity and a desire to solve 
                   complex problems. I thrive in collaborative environments and enjoy mentoring fellow 
                   developers while continuously learning new technologies.

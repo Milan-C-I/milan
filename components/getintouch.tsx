@@ -157,9 +157,9 @@ const GetInTouch: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-none text-white">
-      <div className="min-h-screen py-6">
-        <div className="mb-12">
+    <div className="bg-none text-white">
+      <div className="py-6">
+        <div className="mb-8 sm:mb-0">
           <h2
             className={`text-2xl sm:text-4xl mb-8 font-extrabold md:font-semibold leading-none tracking-tight text-white transform transition-all duration-700 ease-out ${
               isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-8 scale-75"
@@ -276,7 +276,7 @@ const GetInTouch: React.FC = () => {
               <div className="bg-gradient-to-tr from-black via-black to-orange-500/80 backdrop-blur-sm rounded-xl border border-gray-800 p-6 lg:p-8">
                 <h3 className="text-xl font-bold mb-6 text-orange-300">Send a Message</h3>
                 
-                <div className="space-y-6">
+                <div className="space-y-3 md:space-y-4">
                   {/* Name Field */}
                   <div className="group">
                     <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2 group-focus-within:text-orange-300 transition-colors duration-300">
@@ -364,7 +364,7 @@ const GetInTouch: React.FC = () => {
                     type="button"
                     onClick={handleSubmit}
                     disabled={isSubmitting}
-                    className={`w-full flex items-center justify-center gap-3 px-6 py-3 rounded-lg font-semibold text-white transition-all duration-300 transform ${
+                    className={`w-full cursor-pointer flex items-center justify-center gap-3 px-6 py-3 rounded-lg font-semibold text-white transition-all duration-300 transform ${
                       isSubmitting
                         ? 'bg-gray-600 cursor-not-allowed'
                         : 'bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 hover:shadow-lg hover:shadow-orange-500/25 hover:-translate-y-0.5 active:translate-y-0'
