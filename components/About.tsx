@@ -230,7 +230,7 @@ const About: React.FC = () => {
       institution: "St. Joseph's High School",
       location: "Madikeri, Karnataka", 
       period: "2019 - 2020",
-      marks: "94.44%",
+      marks: "93.44%",
       description: "Completed with excellent grades. Developed early interest in computer programming and technology."
     }
   ];
