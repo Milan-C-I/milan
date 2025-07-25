@@ -12,9 +12,13 @@ import {
   SiPython, 
   SiDjango,
   SiJavascript,
-  SiExpress
+  SiExpress,
+  SiCss3,
+  SiUnity
 } from "react-icons/si";
 import { FaGithub, FaExternalLinkAlt, FaEye } from "react-icons/fa";
+import { TbBrandCSharp } from "react-icons/tb";
+import { VscVscode } from "react-icons/vsc";
 
 const Projects: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -102,75 +106,50 @@ const Projects: React.FC = () => {
       'Tailwind CSS': SiTailwindcss,
       'Node.js': SiNodedotjs,
       'MongoDB': SiMongodb,
-      'Firebase': SiFirebase,
-      'Python': SiPython,
-      'Django': SiDjango,
       'JavaScript': SiJavascript,
-      'Express': SiExpress,
+      'CSS' : SiCss3,
+      'C#': TbBrandCSharp,
+      'Unity': SiUnity,
+      'Unity Physics': SiUnity,
+      'Visual Studio': VscVscode,
     };
     return iconMap[tool] || SiReact;
   };
 
   const projects = [
     {
-      id: 1,
-      name: "E-Commerce Platform",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      description: "A full-stack e-commerce platform with user authentication, payment integration, and admin dashboard. Features include product catalog, shopping cart, order management, and real-time notifications.",
-      tools: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "MongoDB"],
-      github: "https://github.com/username/ecommerce-platform",
-      live: "https://ecommerce-demo.vercel.app"
-    },
-    {
-      id: 2,
-      name: "Task Management App",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-      description: "A collaborative task management application with real-time updates, drag-and-drop functionality, team collaboration features, and advanced filtering options.",
-      tools: ["React", "Firebase", "Tailwind CSS", "JavaScript"],
-      github: "https://github.com/username/task-manager",
-      live: "https://taskmanager-demo.vercel.app"
-    },
-    {
-      id: 3,
-      name: "Social Media Dashboard",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-      description: "Analytics dashboard for social media management with data visualization, scheduled posting, engagement tracking, and comprehensive reporting features.",
-      tools: ["Next.js", "TypeScript", "Node.js", "Express", "MongoDB"],
-      github: "https://github.com/username/social-dashboard",
-      live: "https://social-dashboard-demo.vercel.app"
-    },
-    {
-      id: 4,
-      name: "Weather Forecast App",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
-      description: "Real-time weather application with location-based forecasts, interactive maps, weather alerts, and detailed meteorological data visualization.",
-      tools: ["React", "JavaScript", "Tailwind CSS"],
-      github: "https://github.com/username/weather-app",
-      live: "https://weather-demo.vercel.app"
-    },
-    {
-      id: 5,
-      name: "Learning Management System",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop",
-      description: "Comprehensive LMS with course creation, student enrollment, progress tracking, interactive quizzes, and certificate generation features.",
-      tools: ["Python", "Django", "JavaScript", "Tailwind CSS"],
-      github: "https://github.com/username/lms-platform",
-      live: "https://lms-demo.herokuapp.com"
-    },
-    {
-      id: 6,
-      name: "Portfolio Website",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
-      description: "Modern portfolio website with animated components, responsive design, contact forms, blog integration, and performance optimization.",
-      tools: ["Next.js", "TypeScript", "Tailwind CSS"],
-      github: "https://github.com/username/portfolio",
-      live: "https://portfolio-demo.vercel.app"
-    }
+  id: 1,
+  name: "genshin-web-info",
+  image: "https://source.unsplash.com/random/600x400?game,web",
+  description: "A fullstack web app displaying Genshin Impact data with dynamic routing, SSR, and Tailwind styling for seamless performance.",
+  tools: ["React", "Next.js", "TypeScript", "JavaScript", "MongoDB", "Tailwind CSS"],
+  github: "https://github.com/Milan-C-I/genshin-web-info",
+  live: "https://genshinatlas.vercel.app"
+},
+{
+  id: 2,
+  name: "Cube_Game",
+  image: "https://source.unsplash.com/random/600x400?cube,game",
+  description: "A Unity 3D game where players navigate a cube through obstacles. Built using Unity physics with C# scripting.",
+  tools: ["Unity", "C#", "Unity Physics", "Visual Studio"],
+  github: "https://github.com/Milan-C-I/Cube_Game",
+  live: null
+},
+{
+  id: 3,
+  name: "emp-recruiter-app",
+  image: "https://source.unsplash.com/random/600x400?recruiter,app",
+  description: "A modern job portal enabling recruiters to post jobs and applicants to apply, featuring dashboards and notifications.",
+  tools: ["React", "Next.js", "TypeScript", "JavaScript", "MongoDB", "CSS"],
+  github: "https://github.com/Milan-C-I/emp-recruiter-app",
+  live: "https://emp-recruiter-app.vercel.app"
+}
+
   ];
 
   return (
-    <div className="min-h-screen bg-none text-white">
-      <div className="min-h-screen py-6">
+    <div className="bg-none text-white">
+      <div className="py-6">
         <div className="mb-12">
           <h2
             className={`text-2xl sm:text-4xl mb-8 font-extrabold md:font-semibold leading-none tracking-tight text-white transform transition-all duration-700 ease-out ${
@@ -211,7 +190,7 @@ const Projects: React.FC = () => {
                   {/* 3D Container */}
                   <div 
                     ref={(el) => { cardRefs.current[index] = el; }}
-                    className={`relative w-full bg-gray-900/50 backdrop-blur-sm rounded-xl border border-black/10  transition-all duration-300 transform-gpu ${
+                    className={`relative w-full h-full bg-gray-900/50 backdrop-blur-sm rounded-xl border border-black/10  transition-all duration-300 transform-gpu ${
                       isHovered 
                         ? 'shadow-2xl shadow-orange-500/30' 
                         : 'shadow-lg shadow-black/20'
@@ -331,10 +310,10 @@ const Projects: React.FC = () => {
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`flex items-center gap-2 px-4 py-2 bg-transparent rounded-lg transition-all duration-300 transform ${
+                          className={`flex items-center gap-2 px-4 border border-gray-600 py-2 bg-transparent rounded-lg transition-all duration-300 transform ${
                             isHovered 
                               ? ' bg-gradient-to-br from-white via-white/80 to-orange-400 scale-110 shadow-2xl shadow-orange-500/50 translateZ-90' 
-                              : ' '
+                              : ''
                           }`}
                           style={{
                             transform: isHovered ? 'translateZ(90px) scale(1.05)' : 'translateZ(0px) scale(1)',
@@ -345,11 +324,12 @@ const Projects: React.FC = () => {
                           <span className={`text-sm font-semibold ${isHovered ? 'text-black' : ' text-white' }`}>Code</span>
                         </a>
                         
-                        <a
+                        {project.live && (
+                          <a
                           href={project.live}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`flex items-center bg-transparent gap-2 px-4 py-2 rounded-lg transition-all duration-300 transform ${
+                          className={`flex items-center border border-orange-500 bg-transparent gap-2 px-4 py-2 rounded-lg transition-all duration-300 transform ${
                             isHovered 
                               ? ' bg-gradient-to-br from-black via-black/80 to-orange-400 scale-110 shadow-2xl shadow-white/50 translateZ-90' 
                               : ' '
@@ -362,6 +342,7 @@ const Projects: React.FC = () => {
                           <FaExternalLinkAlt className={` ${isHovered ? 'text-orange-500 text-xs' : ' text-white text-sm' }`} />
                           <span className={`text-sm font-semibold`}>Live Demo</span>
                         </a>
+                        )}
                       </div>
                     </div>
                   </div>
