@@ -17,9 +17,13 @@ import {
   SiPostgresql,
   SiRedis,
   SiDocker,
-  SiVuedotjs
+  SiVuedotjs,
+  SiPhp,
+  SiMysql,
+  SiHtml5,
+  SiCss3
 } from "react-icons/si";
-import { FaBuilding, FaMapMarkerAlt, FaCalendarAlt } from "react-icons/fa";
+import { FaBuilding, FaMapMarkerAlt, FaCalendarAlt, FaLaravel } from "react-icons/fa";
 
 const WorkExperience: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -107,77 +111,67 @@ const WorkExperience: React.FC = () => {
       'Tailwind CSS': SiTailwindcss,
       'Node.js': SiNodedotjs,
       'MongoDB': SiMongodb,
-      'Firebase': SiFirebase,
-      'Python': SiPython,
-      'Django': SiDjango,
       'JavaScript': SiJavascript,
-      'Express': SiExpress,
-      'AWS': SiAwsamplify,
-      'PostgreSQL': SiPostgresql,
-      'Redis': SiRedis,
-      'Docker': SiDocker,
-      'Vue.js': SiVuedotjs,
+      'Laravel': FaLaravel,
+      'PHP': SiPhp,
+      'Blade': FaLaravel,
+      'MySQL': SiMysql,
+      'HTML': SiHtml5,
+      'CSS': SiCss3,
     };
     return iconMap[tech] || SiReact;
   };
 
   const workExperiences = [
     {
-      id: 1,
-      position: "Senior Full Stack Developer",
-      company: "TechCorp Solutions",
-      timePeriod: "Jan 2024 - Present",
-      location: "Bengaluru, Karnataka",
-      description: "Led development of enterprise-level web applications serving 100K+ users. Implemented microservices architecture, optimized database queries reducing response time by 40%, and mentored junior developers in best practices.",
-      technologies: ["React", "Next.js", "TypeScript", "Node.js", "MongoDB", "AWS"],
-      achievements: [
-        "Reduced application load time by 60%",
-        "Led team of 5 developers",
-        "Implemented CI/CD pipeline"
-      ]
-    },
-    {
-      id: 2,
-      position: "Full Stack Developer",
-      company: "Digital Innovations Ltd",
-      timePeriod: "Mar 2022 - Dec 2023",
-      location: "Mumbai, Maharashtra",
-      description: "Developed and maintained multiple client projects including e-commerce platforms and SaaS applications. Collaborated with cross-functional teams to deliver high-quality solutions on time and within budget.",
-      technologies: ["React", "Express", "PostgreSQL", "Docker", "Firebase"],
-      achievements: [
-        "Delivered 12+ projects successfully",
-        "Improved code quality by 35%",
-        "Reduced bug reports by 50%"
-      ]
-    },
-    {
-      id: 3,
-      position: "Frontend Developer",
-      company: "StartupHub",
-      timePeriod: "Jun 2021 - Feb 2022",
-      location: "Hyderabad, Telangana",
-      description: "Built responsive and interactive user interfaces for various web applications. Worked closely with UX/UI designers to implement pixel-perfect designs and ensure optimal user experience across all devices.",
-      technologies: ["React", "JavaScript", "Tailwind CSS", "Vue.js"],
-      achievements: [
-        "Increased user engagement by 25%",
-        "Implemented mobile-first design",
-        "Optimized for accessibility"
-      ]
-    },
-    {
-      id: 4,
-      position: "Junior Developer",
-      company: "WebTech Agency",
-      timePeriod: "Aug 2020 - May 2021",
-      location: "Pune, Maharashtra",
-      description: "Started career developing small to medium-scale web applications. Gained experience in full-stack development, learned best practices, and contributed to various client projects while building foundational skills.",
-      technologies: ["JavaScript", "Python", "Django", "MongoDB"],
-      achievements: [
-        "Completed 8+ client projects",
-        "Learned multiple technologies",
-        "Received mentorship recognition"
-      ]
-    }
+    id: 1,
+    position: "Freelance Web Developer",
+    company: "Kreekarvat Technologies",
+    timePeriod: "Nov 2024 - Mar 2025",
+    location: "Mangaluru, Karnataka",
+    description:
+      "Built responsive, high-quality UIs using React, Next.js, and Tailwind CSS. Collaborated with freelance teams to deliver projects on time while ensuring client satisfaction.",
+    technologies: ["React", "Next.js", "Tailwind CSS", "JavaScript", "HTML", "CSS"],
+    achievements: [
+      "Developed responsive and user-friendly web interfaces",
+      "Delivered multiple client projects on time",
+      "Implemented modern UI/UX best practices using Tailwind CSS"
+    ]
+  },
+  {
+    id: 2,
+    position: "Full Stack Developer Intern",
+    company: "A J Institute of Medical Sciences and Research Center",
+    timePeriod: "Sept 2023 - Aug 2024",
+    location: "Mangaluru, Karnataka",
+    description:
+      "Built full-stack healthcare management apps using modern frontend tools and collaborated with cross-functional teams to ensure timely delivery.",
+    technologies: ["React", "Next.js", "Tailwind CSS", "JavaScript", "Node.js", "HTML", "CSS"],
+    achievements: [
+      "Built responsive web apps for healthcare systems",
+      "Collaborated with teams and clients to gather and implement requirements",
+      "Improved user experience through modern UI techniques"
+    ]
+  },
+  {
+    id: 3,
+    position: "Core Team Member",
+    company: "DevNation",
+    timePeriod: "Oct 2024 - Mar 2025",
+    location: "Mangaluru, Karnataka",
+    description:
+      "Organized events and led open-source community projects. Focused on team coordination, project management, and community engagement through tech workshops.",
+    technologies: [
+      "React", "Next.js", "TypeScript", "Node.js",
+      "Laravel", "PHP", "Blade", "JavaScript",
+      "MySQL", "MongoDB", "HTML", "CSS", "Tailwind CSS"
+    ],
+    achievements: [
+      "Organized technical webinars and workshops",
+      "Led and contributed to community-driven web projects",
+      "Improved project management and collaboration skills"
+    ]
+  }
   ];
 
   return (
