@@ -1,5 +1,6 @@
 "use client";
 
+import { sendMail } from "@/backend/nodemailer";
 import React, { useState, useEffect, useRef } from "react";
 import { 
   FaEnvelope, 
@@ -95,14 +96,7 @@ const GetInTouch: React.FC = () => {
     // Simulate API call for nodemailer
     try {
       // Here you would integrate with your nodemailer API endpoint
-      // const response = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData)
-      // });
-      
-      // Simulate success after 2 seconds
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await sendMail(formData);
       
       setSubmitStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
