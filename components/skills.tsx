@@ -148,7 +148,7 @@ const Skills: React.FC = () => {
             TECHNICAL SKILLS
           </h2>
 
-          <div className={`transition-opacity duration-300 ${hoveredSkill ? "opacity-100" : "opacity-0"} h-12 mb-4`}>
+          <div className={`transition-opacity hidden md:block duration-300 ${hoveredSkill ? "opacity-100" : "opacity-0"} h-12 mb-4`}>
             {hoveredSkill && (
               <div>
                 <h4 className="text-sm font-semibold text-orange-300 mb-1">{hoveredSkill.name}</h4>
