@@ -354,7 +354,7 @@ const About: React.FC = () => {
                     if (el) experienceItemsRef.current[index] = el;
                   }}
                   data-index={3 + index}
-                  className={`animated-section relative mb-20 transform transition-all duration-600 ease-out ${
+                  className={`animated-section relative mb-12 md:mb-2 transform transition-all duration-600 ease-out ${
                     visibleSections[3 + index] 
                       ? 'opacity-100 translate-y-0 translate-x-0 scale-100' 
                       : `opacity-0 scale-95 ${
@@ -478,7 +478,7 @@ const About: React.FC = () => {
                     if (el) educationItemsRef.current[index] = el;
                   }}
                   data-index={7 + index}
-                  className={`animated-section relative mb-20 transform transition-all duration-600 ease-out ${
+                  className={`animated-section relative mb-12 md:mb-2 transform transition-all duration-600 ease-out ${
                     visibleSections[7 + index] 
                       ? 'opacity-100 translate-y-0 translate-x-0 scale-100' 
                       : `opacity-0 scale-95 ${

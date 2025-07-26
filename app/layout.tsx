@@ -5,6 +5,7 @@ import Header from "../components/Header"
 import ScrollToTop from "../components/ScrollToTop"
 import Navbar from "@/components/Navbar"
 import UnderConstructionBanner from "@/components/underconstruction"
+import ParticleOrbitEffect from "@/components/particle-orbit-effect"
 
 export const metadata: Metadata = {
   title: "Milan CI",
@@ -37,15 +38,17 @@ export default function RootLayout({
         <div className="fixed -top-30 -left-30 -z-9   md:top-30 md:left-20 w-72 h-72 bg-orange-500/80 rounded-full blur-3xl animate-pulse"></div>
         <div className="fixed inset-0 -z-10 animated-gradient" style={{ opacity: 1 }} />
 
+        <ParticleOrbitEffect className="hidden md:block" particleCount={20} particleSize={3} fadeOpacity={0.02} radiusScale={1.2} colorRange={[0,40]} intensity={0.7}/>
         {/* Fixed Header */}
         <Header />
+
 
         {/* Main content with top padding to account for fixed header */}
         <main className="pt-20">
           {children}
         </main>
         <Navbar />
-        <UnderConstructionBanner/>
+        {/* <UnderConstructionBanner/> */}
         
         {/* Scroll to Top Button */}
         <ScrollToTop />
