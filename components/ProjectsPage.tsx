@@ -16,6 +16,7 @@ import {
   SiHtml5,
   SiCss3,
   SiExpo,
+  SiFirebase,
 } from "react-icons/si";
 import { FaGithub, FaExternalLinkAlt, FaLaravel } from "react-icons/fa";
 import { TbBrandCSharp, TbBrandReactNative } from "react-icons/tb";
@@ -56,6 +57,7 @@ const ProjectsPage: React.FC = () => {
       "Tailwind CSS": SiTailwindcss,
       "Node.js": SiNodedotjs,
       "MongoDB": SiMongodb,
+      "Firebae": SiFirebase,
       "C#": TbBrandCSharp,
       "JavaScript": SiJavascript,
       "Unity": SiUnity,
@@ -72,6 +74,7 @@ const ProjectsPage: React.FC = () => {
       "CSS": SiCss3,
       "React Native": TbBrandReactNative,
       "Expo": SiExpo,
+      "npm package": SiNodedotjs,
     };
     return iconMap[tool] || SiReact;
   };
@@ -208,6 +211,33 @@ const ProjectsPage: React.FC = () => {
       ],
       size: "medium",
     },
+    {
+      id: 9,
+      name: "reactnativeepictrailsds",
+      image: "https://source.unsplash.com/random/600x400?hiking,trails",
+      description: "Epic Trails DS is a React Native design system built by the Flourish development team to ensure consistency, scalability, and efficiency in UI/UX development. Using Storybook, this project provides a structured approach to component-based design, making it easier to create and maintain visually cohesive applications.",
+      tools: ["React Native","Node.js","npm package", "TypeScript", "Expo", "React", "Tailwind CSS", "Storybook",],
+      github: "https://github.com/Milan-C-I/reactnativeepictrailsds",
+      live: "https://www.npmjs.com/package/reactnativeepictrailsds",
+      features: [
+        "Cross-Platform UI",
+        "Smooth Navigation",
+        "Responsive Design",
+        "Type-Safe Components",
+      ],
+      size: "large",
+    },
+    {
+      id: 10,
+      name : "svstems",
+      image: "https://source.unsplash.com/random/600x400?hiking,trails",
+      description: "Official website for SVS Temple English medium School Bantwal. This site will offer information on courses, admissions, faculty, and campus activities, providing a gateway for students, parents, and educators to explore the school’s offerings and community.",
+      tools: ["React","Next.js","Firebae","MongoDB","JavaScript","Tailwind CSS"],
+      github: "https://github.com/gaureshpai/svstems",
+      live: "www.svstems.edu.in",
+      features: ["Admissions", "Academics", "Faculty", "Updates"],
+      size: "medium",
+    },
   ];
 
   // Initialize projects visibility
@@ -301,7 +331,7 @@ const ProjectsPage: React.FC = () => {
         {/* Projects Grid */}
         <div
           ref={projectsRef}
-          className="grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-16 mt-24 md:mt-32 auto-rows-fr"
+          className="grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-16 mt-24 px-6 md:mt-32 auto-rows-fr"
         >
           {projects.map((project, index) => {
             const isInView = projectsInView[index];
