@@ -78,6 +78,7 @@ const Header: React.FC = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
+          <a href="/Milan-Resume.pdf" download>
           <button
             className="group flex items-center gap-2 px-4 py-2 rounded-lg bg-transparent
               transition-all duration-300 transform-gpu cursor-pointer
@@ -89,6 +90,7 @@ const Header: React.FC = () => {
               Resume
             </span>
           </button>
+          </a>
         </div>
       </div>
     </header>

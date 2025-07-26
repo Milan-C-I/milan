@@ -83,7 +83,7 @@ const ProjectsPage: React.FC = () => {
     {
       id: 1,
       name: "genshin-web-info",
-      image: "https://source.unsplash.com/random/600x400?game,web",
+      image: "/genshinatlas.vercel.app_.png",
       description:
         "Embark on an epic journey through the breathtaking world of Genshin Impact — where your adventure begins, and destiny awaits. Built with Next.js as a fullstack framework, this project combines dynamic routing, server-side rendering, and modern styling with Tailwind CSS to deliver fast, responsive, and content-rich experiences. Ideal for showcasing in-depth game data and visuals with seamless performance.",
       tools: [
@@ -102,7 +102,7 @@ const ProjectsPage: React.FC = () => {
     {
       id: 2,
       name: "Cube_Game",
-      image: "https://source.unsplash.com/random/600x400?cube,game",
+      image: "/Cube_game.png",
       description:
         "Cube Game is a simple and engaging 3D game built in Unity using C#. Players control a cube navigating through platforms while avoiding obstacles. The game features smooth controls, score tracking, and increasing difficulty over time.",
       tools: ["Unity", "C#", "Unity Physics", "Visual Studio"],
@@ -114,7 +114,7 @@ const ProjectsPage: React.FC = () => {
     {
       id: 3,
       name: "emp-recruiter-app",
-      image: "https://source.unsplash.com/random/600x400?recruiter,app",
+      image: "/emp-recruiter-app.vercel.app_.png",
       description:
         "Emp-Recruiter is a cutting-edge web application designed to streamline the job application and recruitment process. Job seekers can easily browse and apply for a variety of job opportunities, creating personalized profiles to showcase their skills and experience. Recruiters and hiring managers can post job listings and search for potential candidates.",
       tools: ["React", "Next.js", "TypeScript", "JavaScript", "MongoDB", "CSS"],
@@ -126,7 +126,7 @@ const ProjectsPage: React.FC = () => {
     {
       id: 4,
       name: "elim-nation",
-      image: "https://source.unsplash.com/random/600x400?minimal,design",
+      image: "/elim-nation.vercel.app_.png",
       description:
         "Elim Nation is a dedicated event website created for Elim Nation, an event conducted under Enigma. The site provides event details, schedules, highlights, and visual branding to engage participants and visitors.",
       tools: [
@@ -151,7 +151,7 @@ const ProjectsPage: React.FC = () => {
     {
       id: 5,
       name: "DevNation-CMS",
-      image: "https://source.unsplash.com/random/600x400?cms,web",
+      image: "/DevNation_CMS.png",
       description:
         "This is a community-level open-source project that serves as a CMS (Content Management System) for our community DevNation.",
       tools: ["Laravel", "PHP", "Blade", "JavaScript", "MySQL"],
@@ -168,7 +168,7 @@ const ProjectsPage: React.FC = () => {
     {
       id: 6,
       name: "flappybirdy_game",
-      image: "https://source.unsplash.com/random/600x400?flappy,bird",
+      image: "/flappybird-game.png",
       description:
         "Flappy Birdy is a Unity-based clone of the classic Flappy Bird game, developed using C#. Players tap to keep the bird airborne while navigating through challenging pipes. The game includes basic physics, collision detection, scoring, and a restart system.",
       tools: ["Unity", "C#", "2D Physics Engine", "Sprite Renderer"],
@@ -185,7 +185,7 @@ const ProjectsPage: React.FC = () => {
     {
       id: 7,
       name: "onepiece",
-      image: "https://source.unsplash.com/random/600x400?onepiece,fan",
+      image: "/onepiece-milan.vercel.app_.png",
       description:
         "This is a fan-made One Piece web app that showcases characters, story arcs, and visuals from the iconic anime series. Built with modern web technologies, it offers an interactive and visually engaging experience for fans. Users can explore character profiles, learn about arcs, and enjoy themed design inspired by the One Piece universe.",
       tools: ["HTML", "CSS", "JavaScript"],
@@ -197,7 +197,7 @@ const ProjectsPage: React.FC = () => {
     {
       id: 8,
       name: "Demo-react-native-epic-trails-ds",
-      image: "https://source.unsplash.com/random/600x400?hiking,trails",
+      image: "/epictrails-demo.expo.app_design1.png",
       description:
         "An Expo-powered demo React Native app that showcases a mobile experience for a hiking trail platform. Designed with smooth animations, responsive design, and strong cross-platform support. Features include episode highlights, character showcases, and intuitive navigation.",
       tools: ["React Native", "TypeScript", "Expo", "React", "Tailwind CSS"],
@@ -214,9 +214,9 @@ const ProjectsPage: React.FC = () => {
     {
       id: 9,
       name: "reactnativeepictrailsds",
-      image: "https://source.unsplash.com/random/600x400?hiking,trails",
+      image: "/www.npmjs.com_package_reactnativeepictrailsds.png",
       description: "Epic Trails DS is a React Native design system built by the Flourish development team to ensure consistency, scalability, and efficiency in UI/UX development. Using Storybook, this project provides a structured approach to component-based design, making it easier to create and maintain visually cohesive applications.",
-      tools: ["React Native","Node.js","npm package", "TypeScript", "Expo", "React", "Tailwind CSS", "Storybook",],
+      tools: ["React Native","Node.js","npm package", "TypeScript", "Expo", "React", "Tailwind CSS", "Storybook"],
       github: "https://github.com/Milan-C-I/reactnativeepictrailsds",
       live: "https://www.npmjs.com/package/reactnativeepictrailsds",
       features: [
@@ -230,11 +230,11 @@ const ProjectsPage: React.FC = () => {
     {
       id: 10,
       name : "svstems",
-      image: "https://source.unsplash.com/random/600x400?hiking,trails",
+      image: "/www.svstems.edu.in_.png",
       description: "Official website for SVS Temple English medium School Bantwal. This site will offer information on courses, admissions, faculty, and campus activities, providing a gateway for students, parents, and educators to explore the school’s offerings and community.",
       tools: ["React","Next.js","Firebae","MongoDB","JavaScript","Tailwind CSS"],
       github: "https://github.com/gaureshpai/svstems",
-      live: "www.svstems.edu.in",
+      live: "https://svstems.edu.in",
       features: ["Admissions", "Academics", "Faculty", "Updates"],
       size: "medium",
     },
@@ -331,7 +331,7 @@ const ProjectsPage: React.FC = () => {
         {/* Projects Grid */}
         <div
           ref={projectsRef}
-          className="grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-16 mt-24 px-6 md:mt-32 auto-rows-fr"
+          className="grid grid-cols-1 md:grid-cols-4 gap-6 lg:gap-16 mt-24 sm:px-6 md:mt-32 auto-rows-fr"
         >
           {projects.map((project, index) => {
             const isInView = projectsInView[index];
@@ -394,7 +394,7 @@ const ProjectsPage: React.FC = () => {
                       <img
                         src={project.image}
                         alt={project.name}
-                        className={`w-full h-full object-cover transition-all duration-700 ${
+                        className={`w-full h-full object-cover object-top transition-all duration-700 ${
                           isHovered ? "scale-110 brightness-110" : "scale-100"
                         }`}
                       />

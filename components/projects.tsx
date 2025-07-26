@@ -120,7 +120,7 @@ const Projects: React.FC = () => {
     {
   id: 1,
   name: "genshin-web-info",
-  image: "https://source.unsplash.com/random/600x400?game,web",
+  image: "/genshinatlas.vercel.app_.png",
   description: "A fullstack web app displaying Genshin Impact data with dynamic routing, SSR, and Tailwind styling for seamless performance.",
   tools: ["React", "Next.js", "TypeScript", "JavaScript", "MongoDB", "Tailwind CSS"],
   github: "https://github.com/Milan-C-I/genshin-web-info",
@@ -129,7 +129,7 @@ const Projects: React.FC = () => {
 {
   id: 2,
   name: "Cube_Game",
-  image: "https://source.unsplash.com/random/600x400?cube,game",
+  image: "/Cube_game.png",
   description: "A Unity 3D game where players navigate a cube through obstacles. Built using Unity physics with C# scripting.",
   tools: ["Unity", "C#", "Unity Physics", "Visual Studio"],
   github: "https://github.com/Milan-C-I/Cube_Game",
@@ -138,14 +138,40 @@ const Projects: React.FC = () => {
 {
   id: 3,
   name: "emp-recruiter-app",
-  image: "https://source.unsplash.com/random/600x400?recruiter,app",
+  image: "/emp-recruiter-app.vercel.app_.png",
   description: "A modern job portal enabling recruiters to post jobs and applicants to apply, featuring dashboards and notifications.",
   tools: ["React", "Next.js", "TypeScript", "JavaScript", "MongoDB", "CSS"],
   github: "https://github.com/Milan-C-I/emp-recruiter-app",
   live: "https://emp-recruiter-app.vercel.app"
+},
+{
+  id: 4,
+  name: "elim-nation",
+  image: "/elim-nation.vercel.app_.png",
+  description: "Elim Nation is a dedicated event website created for Elim Nation, an event conducted under Enigma. The site provides event details, schedules, highlights, and visual branding to engage participants and visitors.",
+  tools: ["React","Next.js","TypeScript","JavaScript","MongoDB","Prisma ORM","Tailwind CSS",],
+  github: "https://github.com/Milan-C-I/elim-nation",
+  live: "https://elim-nation.vercel.app"
+},
+{
+  id: 5,
+  name: "reactnativeepictrailsds",
+  image: "/www.npmjs.com_package_reactnativeepictrailsds.png",
+  description: "Epic Trails DS is a React Native design system built by the Flourish development team to ensure consistency, scalability, and efficiency in UI/UX development. Using Storybook, this project provides a structured approach to component-based design, making it easier to create and maintain visually cohesive applications.",
+  tools: ["React Native","Node.js","npm package", "TypeScript", "Expo", "React", "Tailwind CSS", "Storybook"],
+  github: "https://github.com/Milan-C-I/reactnativeepictrailsds",
+  live: "https://www.npmjs.com/package/reactnativeepictrailsds"
+},
+{
+  id: 6,
+  name: "svstems",
+  image: "/www.svstems.edu.in_.png",
+  description: "Official website for SVS Temple English medium School Bantwal. This site will offer information on courses, admissions, faculty, and campus activities, providing a gateway for students, parents, and educators to explore the school’s offerings and community.",
+  tools: ["React","Next.js","Firebae","MongoDB","JavaScript","Tailwind CSS"],
+  github: "https://github.com/gaureshpai/svstems",
+  live: "https://svstems.edu.in"
 }
-
-  ];
+];
 
   return (
     <div className="bg-none text-white">
@@ -221,7 +247,7 @@ const Projects: React.FC = () => {
                       <img
                         src={project.image}
                         alt={project.name}
-                        className={`w-full h-full object-cover transition-all duration-500 ${
+                        className={`w-full h-full object-cover object-top transition-all duration-500 ${
                           isHovered ? 'scale-110 brightness-110' : 'scale-100'
                         }`}
                       />

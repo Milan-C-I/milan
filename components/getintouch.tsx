@@ -125,7 +125,7 @@ const GetInTouch: React.FC = () => {
       icon: FaMapMarkerAlt,
       label: "Location",
       value: "Mangaluru, Karnataka, IN",
-      href: "#"
+      href: null
     }
   ];
 
@@ -191,7 +191,7 @@ const GetInTouch: React.FC = () => {
                   return (
                     <a
                       key={info.label}
-                      href={info.href}
+                      href={info.href || undefined}
                       className={`group block bg-gray-900/30 backdrop-blur-sm rounded-lg p-4 transition-all duration-300 hover:bg-gray-800/50 hover:shadow-lg hover:shadow-orange-500/10 transform hover:-translate-y-1`}
                       style={{
                         transitionDelay: `${index * 100}ms`
