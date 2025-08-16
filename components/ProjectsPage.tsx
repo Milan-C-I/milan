@@ -14,6 +14,7 @@ import {
   SiPhp,
   SiMysql,
   SiHtml5,
+  SiSocketdotio,
   SiCss3,
   SiExpo,
   SiFirebase,
@@ -53,6 +54,7 @@ const ProjectsPage: React.FC = () => {
     const iconMap: { [key: string]: React.ComponentType<any> } = {
       "React": SiReact,
       "Next.js": SiNextdotjs,
+      "Socket.io": SiSocketdotio,
       "TypeScript": SiTypescript,
       "Tailwind CSS": SiTailwindcss,
       "Node.js": SiNodedotjs,
@@ -101,6 +103,48 @@ const ProjectsPage: React.FC = () => {
     },
     {
       id: 2,
+      name: "play-hive",
+      image: "/play-hive-gamma.vercel.app_.png",
+      description:
+      "Play Hive brings together 10 beloved classic games in a sleek, modern interface. We've reimagined these timeless arcade experiences with vibrant neon aesthetics, smooth animations, and responsive design that works perfectly on any device.",
+      tools: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "Tailwind CSS",
+      ],
+      github: "https://github.com/Milan-C-I/play-hive",
+      live: "https://play-hive-gamma.vercel.app/",
+      features: ["Characters", "Visuals", "Elements", "Animated Transitions"],
+      size: "medium",
+    },
+    {
+      id: 3,
+      name: "youtube-watch-party",
+      image: "/youtubewatchparty.vercel.app_.png",
+      description:
+      "Enjoy watching YouTube videos with friends in sync. Create a room, share the code, and experience seamless group viewing.",
+      tools: [
+        "Socket.io",
+        "React",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "Tailwind CSS",
+      ],
+      github: "https://github.com/Milan-C-I/ytsync",
+      live: "https://youtubewatchparty.vercel.app/",
+      features: [
+        "Room Creation",
+        "Synchronized YouTube Playback",
+        "Real-Time Chatbox",
+        "Cross-Device Responsive UI"
+      ],
+      size: "large",
+    },
+    {
+      id: 4,
       name: "Cube_Game",
       image: "/Cube_game.png",
       description:
@@ -112,7 +156,7 @@ const ProjectsPage: React.FC = () => {
       size: "medium",
     },
     {
-      id: 3,
+      id: 5,
       name: "emp-recruiter-app",
       image: "/emp-recruiter-app.vercel.app_.png",
       description:
@@ -124,7 +168,7 @@ const ProjectsPage: React.FC = () => {
       size: "large",
     },
     {
-      id: 4,
+      id: 6,
       name: "elim-nation",
       image: "/elim-nation.vercel.app_.png",
       description:
@@ -149,7 +193,7 @@ const ProjectsPage: React.FC = () => {
       size: "medium",
     },
     {
-      id: 5,
+      id: 7,
       name: "DevNation-CMS",
       image: "/DevNation_CMS.png",
       description:
@@ -166,7 +210,7 @@ const ProjectsPage: React.FC = () => {
       size: "large",
     },
     {
-      id: 6,
+      id: 8,
       name: "flappybirdy_game",
       image: "/flappybird-game.png",
       description:
@@ -183,7 +227,7 @@ const ProjectsPage: React.FC = () => {
       size: "medium",
     },
     {
-      id: 7,
+      id: 9,
       name: "onepiece",
       image: "/onepiece-milan.vercel.app_.png",
       description:
@@ -195,7 +239,7 @@ const ProjectsPage: React.FC = () => {
       size: "medium",
     },
     {
-      id: 8,
+      id: 10,
       name: "Demo-react-native-epic-trails-ds",
       image: "/epictrails-demo.expo.app_design1.png",
       description:
@@ -212,7 +256,7 @@ const ProjectsPage: React.FC = () => {
       size: "medium",
     },
     {
-      id: 9,
+      id: 11,
       name: "reactnativeepictrailsds",
       image: "/www.npmjs.com_package_reactnativeepictrailsds.png",
       description: "Epic Trails DS is a React Native design system built by the Flourish development team to ensure consistency, scalability, and efficiency in UI/UX development. Using Storybook, this project provides a structured approach to component-based design, making it easier to create and maintain visually cohesive applications.",
@@ -228,7 +272,7 @@ const ProjectsPage: React.FC = () => {
       size: "large",
     },
     {
-      id: 10,
+      id: 12,
       name : "svstems",
       image: "/www.svstems.edu.in_.png",
       description: "Official website for SVS Temple English medium School Bantwal. This site will offer information on courses, admissions, faculty, and campus activities, providing a gateway for students, parents, and educators to explore the school’s offerings and community.",
