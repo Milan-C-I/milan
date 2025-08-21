@@ -179,7 +179,7 @@ const Projects: React.FC = () => {
 {
   id: 6,
   name: "Habit Tracker",
-  image: "/habitpulse-tracker.vercel.app_.p",
+  image: "/habitpulse-tracker.vercel.app_.png",
   description: "The Health Habit Tracker is a web app that helps users build and maintain healthy routines by providing a clear overview of their daily habits. It allows users to create and log habits, track total, completed, and active habits, and stay consistent with an easy-to-use logging system. With secure authentication, each user gets a personalized experience, while interactive graphs and visual insights showcase progress and overall consistency. Designed with a clean and responsive interface, the app makes tracking habits simple, engaging, and motivating.",
   tools: ["React","Next.js","TypeScript","openai","PostgreSQL","Prisma ORM","Tailwind CSS",],
   github: "https://github.com/Milan-C-I/health-habit-tracker",
