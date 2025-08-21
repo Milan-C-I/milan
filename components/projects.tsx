@@ -14,7 +14,13 @@ import {
   SiJavascript,
   SiExpress,
   SiCss3,
-  SiUnity
+  SiUnity,
+  SiSocketdotio,
+  SiPrisma,
+  SiExpo,
+  SiStorybook,
+  SiOpenai,
+  SiPostgresql
 } from "react-icons/si";
 import { FaGithub, FaExternalLinkAlt, FaEye } from "react-icons/fa";
 import { TbBrandCSharp } from "react-icons/tb";
@@ -112,6 +118,14 @@ const Projects: React.FC = () => {
       'Unity': SiUnity,
       'Unity Physics': SiUnity,
       'Visual Studio': VscVscode,
+      'Socket.io': SiSocketdotio,
+      'Prisma ORM': SiPrisma,
+      'Expo': SiExpo,
+      'Storybook': SiStorybook,
+      'bcryptjs': SiNodedotjs,
+      'openai': SiOpenai,
+      'PostgreSQL': SiPostgresql,
+      'npm package': SiNodedotjs,
     };
     return iconMap[tool] || SiReact;
   };
@@ -128,21 +142,21 @@ const Projects: React.FC = () => {
 },
 {
   id: 2,
+  name: "youtube watch party",
+  image: "/youtubewatchparty.vercel.app_.png",
+  description: "Enjoy watching YouTube videos with friends in sync. Create a room, share the code, and experience seamless group viewing.",
+  tools: ["Socket.io","React","Next.js","TypeScript","JavaScript","Tailwind CSS",],
+  github: "https://github.com/Milan-C-I/ytsync",
+  live: "https://youtubewatchparty.vercel.app/"
+},
+{
+  id: 3,
   name: "Cube_Game",
   image: "/Cube_game.png",
   description: "A Unity 3D game where players navigate a cube through obstacles. Built using Unity physics with C# scripting.",
   tools: ["Unity", "C#", "Unity Physics", "Visual Studio"],
   github: "https://github.com/Milan-C-I/Cube_Game",
   live: null
-},
-{
-  id: 3,
-  name: "emp-recruiter-app",
-  image: "/emp-recruiter-app.vercel.app_.png",
-  description: "A modern job portal enabling recruiters to post jobs and applicants to apply, featuring dashboards and notifications.",
-  tools: ["React", "Next.js", "TypeScript", "JavaScript", "MongoDB", "CSS"],
-  github: "https://github.com/Milan-C-I/emp-recruiter-app",
-  live: "https://emp-recruiter-app.vercel.app"
 },
 {
   id: 4,
@@ -164,12 +178,12 @@ const Projects: React.FC = () => {
 },
 {
   id: 6,
-  name: "svstems",
-  image: "/www.svstems.edu.in_.png",
-  description: "Official website for SVS Temple English medium School Bantwal. This site will offer information on courses, admissions, faculty, and campus activities, providing a gateway for students, parents, and educators to explore the school’s offerings and community.",
-  tools: ["React","Next.js","Firebae","MongoDB","JavaScript","Tailwind CSS"],
-  github: "https://github.com/gaureshpai/svstems",
-  live: "https://svstems.edu.in"
+  name: "Habit Tracker",
+  image: "/habitpulse-tracker.vercel.app_.p",
+  description: "The Health Habit Tracker is a web app that helps users build and maintain healthy routines by providing a clear overview of their daily habits. It allows users to create and log habits, track total, completed, and active habits, and stay consistent with an easy-to-use logging system. With secure authentication, each user gets a personalized experience, while interactive graphs and visual insights showcase progress and overall consistency. Designed with a clean and responsive interface, the app makes tracking habits simple, engaging, and motivating.",
+  tools: ["React","Next.js","TypeScript","openai","PostgreSQL","Prisma ORM","Tailwind CSS",],
+  github: "https://github.com/Milan-C-I/health-habit-tracker",
+  live: "https://habitpulse-tracker.vercel.app/"
 }
 ];
 

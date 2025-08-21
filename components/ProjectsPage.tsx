@@ -18,6 +18,8 @@ import {
   SiCss3,
   SiExpo,
   SiFirebase,
+  SiOpenai,
+  SiPostgresql,
 } from "react-icons/si";
 import { FaGithub, FaExternalLinkAlt, FaLaravel } from "react-icons/fa";
 import { TbBrandCSharp, TbBrandReactNative } from "react-icons/tb";
@@ -41,6 +43,17 @@ const ProjectsPage: React.FC = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
   const observerRef = useRef<IntersectionObserver | null>(null);
+
+  const [width, setWidth] = useState<number | null>(null)
+
+  useEffect(() => {
+    // Runs only on client
+    setWidth(window.innerWidth)
+
+    const handleResize = () => setWidth(window.innerWidth)
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -77,6 +90,9 @@ const ProjectsPage: React.FC = () => {
       "React Native": TbBrandReactNative,
       "Expo": SiExpo,
       "npm package": SiNodedotjs,
+      "bcryptjs": SiNodedotjs,
+      "openai": SiOpenai,
+      "PostgreSQL": SiPostgresql
     };
     return iconMap[tool] || SiReact;
   };
@@ -121,7 +137,7 @@ const ProjectsPage: React.FC = () => {
     },
     {
       id: 3,
-      name: "youtube-watch-party",
+      name: "youtube watch party",
       image: "/youtubewatchparty.vercel.app_.png",
       description:
       "Enjoy watching YouTube videos with friends in sync. Create a room, share the code, and experience seamless group viewing.",
@@ -144,8 +160,27 @@ const ProjectsPage: React.FC = () => {
       size: "large",
     },
     {
-      id: 4,
-      name: "Cube_Game",
+      id:4,
+      name: "Habit Tracker",
+      image: "/habitpulse-tracker.vercel.app_.png",
+      description: "The Health Habit Tracker is a web app that helps users build and maintain healthy routines by providing a clear overview of their daily habits. It allows users to create and log habits, track total, completed, and active habits, and stay consistent with an easy-to-use logging system. With secure authentication, each user gets a personalized experience, while interactive graphs and visual insights showcase progress and overall consistency. Designed with a clean and responsive interface, the app makes tracking habits simple, engaging, and motivating.",
+      tools: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma ORM",
+        "openai",
+        "Tailwind CSS",
+      ],
+      github: "https://github.com/Milan-C-I/health-habit-tracker",
+      live: "https://habitpulse-tracker.vercel.app/",
+      features: ["Authentication", "Habit Management", "Progress Tracking"],
+      size: "large",
+    },
+    {
+      id: 5,
+      name: "Cube Game",
       image: "/Cube_game.png",
       description:
         "Cube Game is a simple and engaging 3D game built in Unity using C#. Players control a cube navigating through platforms while avoiding obstacles. The game features smooth controls, score tracking, and increasing difficulty over time.",
@@ -154,18 +189,6 @@ const ProjectsPage: React.FC = () => {
       live: null,
       features: ["Physics", "Levels", "Scoring", "Controls"],
       size: "medium",
-    },
-    {
-      id: 5,
-      name: "emp-recruiter-app",
-      image: "/emp-recruiter-app.vercel.app_.png",
-      description:
-        "Emp-Recruiter is a cutting-edge web application designed to streamline the job application and recruitment process. Job seekers can easily browse and apply for a variety of job opportunities, creating personalized profiles to showcase their skills and experience. Recruiters and hiring managers can post job listings and search for potential candidates.",
-      tools: ["React", "Next.js", "TypeScript", "JavaScript", "MongoDB", "CSS"],
-      github: "https://github.com/Milan-C-I/emp-recruiter-app",
-      live: "https://emp-recruiter-app.vercel.app",
-      features: ["Applications", "Profiles", "Notifications", "Dashboard"],
-      size: "large",
     },
     {
       id: 6,
@@ -194,6 +217,18 @@ const ProjectsPage: React.FC = () => {
     },
     {
       id: 7,
+      name: "emp-recruiter-app",
+      image: "/emp-recruiter-app.vercel.app_.png",
+      description:
+        "Emp-Recruiter is a cutting-edge web application designed to streamline the job application and recruitment process. Job seekers can easily browse and apply for a variety of job opportunities, creating personalized profiles to showcase their skills and experience. Recruiters and hiring managers can post job listings and search for potential candidates.",
+      tools: ["React", "Next.js", "TypeScript", "JavaScript", "MongoDB", "CSS"],
+      github: "https://github.com/Milan-C-I/emp-recruiter-app",
+      live: "https://emp-recruiter-app.vercel.app",
+      features: ["Applications", "Profiles", "Notifications", "Dashboard"],
+      size: "large",
+    },
+    {
+      id: 8,
       name: "DevNation-CMS",
       image: "/DevNation_CMS.png",
       description:
@@ -210,7 +245,7 @@ const ProjectsPage: React.FC = () => {
       size: "large",
     },
     {
-      id: 8,
+      id: 9,
       name: "flappybirdy_game",
       image: "/flappybird-game.png",
       description:
@@ -227,7 +262,7 @@ const ProjectsPage: React.FC = () => {
       size: "medium",
     },
     {
-      id: 9,
+      id: 10,
       name: "onepiece",
       image: "/onepiece-milan.vercel.app_.png",
       description:
@@ -239,7 +274,7 @@ const ProjectsPage: React.FC = () => {
       size: "medium",
     },
     {
-      id: 10,
+      id: 11,
       name: "Demo-react-native-epic-trails-ds",
       image: "/epictrails-demo.expo.app_design1.png",
       description:
@@ -256,7 +291,7 @@ const ProjectsPage: React.FC = () => {
       size: "medium",
     },
     {
-      id: 11,
+      id: 12,
       name: "reactnativeepictrailsds",
       image: "/www.npmjs.com_package_reactnativeepictrailsds.png",
       description: "Epic Trails DS is a React Native design system built by the Flourish development team to ensure consistency, scalability, and efficiency in UI/UX development. Using Storybook, this project provides a structured approach to component-based design, making it easier to create and maintain visually cohesive applications.",
@@ -272,7 +307,7 @@ const ProjectsPage: React.FC = () => {
       size: "large",
     },
     {
-      id: 12,
+      id: 13,
       name : "svstems",
       image: "/www.svstems.edu.in_.png",
       description: "Official website for SVS Temple English medium School Bantwal. This site will offer information on courses, admissions, faculty, and campus activities, providing a gateway for students, parents, and educators to explore the school’s offerings and community.",
@@ -387,7 +422,7 @@ const ProjectsPage: React.FC = () => {
                 key={project.id}
                 data-index={index}
                 className={`project-card ${getGridClasses(
-                  project.size
+                  width && width > 1024 ? project.size : "large"
                 )} transform transition-all duration-700 ease-out ${
                   isInView
                     ? "opacity-100 translate-x-0 translate-y-0"
@@ -469,8 +504,7 @@ const ProjectsPage: React.FC = () => {
                       {project.description}
                     </p>
 
-                    {/* Features (for large cards) */}
-                    {project.size === "large" && (
+                    {/* Features*/}
                       <div className="mb-4">
                         <h4 className="text-orange-300 font-semibold mb-2 text-sm">
                           Key Features:
@@ -486,7 +520,6 @@ const ProjectsPage: React.FC = () => {
                           ))}
                         </div>
                       </div>
-                    )}
 
                     {/* Tools Used */}
                     <div className="mb-4">
